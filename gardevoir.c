@@ -51,6 +51,5 @@ void printDbFn(Pokemon *db, int nr, int debug){
 		printf("\nBeginning printDbFn");
 	for(i=0; i<nr; i++)
 			printf("\n%d\t%s\t%s\t%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%s", &(*db)[index].id, (*db)[index].name, (*db)[index].type1, (*db)[index].type2, &(*db)[index].stats.hp, &(*db)[index].stats.atk, &(*db)[index].stats.def, &(*db)[index].stats.spAtk, &(*db)[index].stats.spDef, &(*db)[index].stats.spd, &(*db)[index].gen, (*db)[index].legg);
-
 }
 */
