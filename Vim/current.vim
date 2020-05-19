@@ -327,12 +327,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 43 - ((14 * winheight(0) + 28) / 57)
+let s:l = 35 - ((19 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-43
-normal! 057|
+35
+normal! 017|
 tabnext 2
 set stal=1
 badd +0 gardevoir.c
