@@ -18,6 +18,7 @@ typedef struct{
 	Stats stats;
 	int gen;
 	char legg[5+1];
+	int readable;
 } Pokemon;
 
 void helloWorldFn();

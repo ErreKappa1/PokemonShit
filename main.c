@@ -9,8 +9,9 @@ int main(void){
 	int nr=0;//number of rows
 	int debug=1;//debug==1 yup
 
-	nr=loadFileFn(&db, "pokemon_data.txt", debug);//load the file into the db
-	printf("\nNumber of lines %d", nr);
+	nr=loadFileFn(&db, "pokemon_data_2.txt", debug);//load the file into the db
+	if(debug)
+		printf("\nNumber of lines %d", nr);
 	//printDbFn(db, nr, debug);
 
 	helloWorldFn();//check inf the other file are detected
