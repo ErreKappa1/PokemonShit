@@ -1,6 +1,11 @@
 #ifndef _gardevoir_H_
 #define _gardevoir_H_
 
+//a bunch of OS-specific instruction, they will work with anything unix like, but windows is DOS based soooo...
+#define clear "clear"
+#define pwd "pwd"
+#define sleep "read -p 'Press any key to continue...'"
+
 typedef struct{
 	int hp;
 	int atk;
@@ -12,9 +17,9 @@ typedef struct{
 
 typedef struct{
 	int id;
-	char name[40];
-	char type1[10];
-	char type2[10];
+	char name[40+1];
+	char type1[10+1];
+	char type2[10+1];
 	Stats stats;
 	int gen;
 	char legg[5+1];
@@ -24,5 +29,6 @@ typedef struct{
 void helloWorldFn();
 int loadFileFn(Pokemon **db, char fileName[], int debug);//load the content of the file into **db
 void printDbFn(Pokemon *db, int nr, int debug);//read db and print everything to stdout
+void printPkmnName(Pokemon *db, int nr, int debug, char goalPkmn[]);//print a single line of the db based on the first parameter
 
 #endif
