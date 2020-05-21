@@ -4,11 +4,11 @@ let s:cpo_save=&cpo
 set cpo&vim
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
-map zo o
-map zO O
-map z<Down> ok
 map z<Up> Oj
-nnoremap <F1> :make!
+map z<Down> ok
+map zO O
+map zo o
+nnoremap <F3> :! ./gmake.sh
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
 nnoremap <F12> :tabe
@@ -16,7 +16,7 @@ nnoremap <F10> :source Vim/current.vim
 nnoremap <F9> :mksession! Vim/current.vim
 nnoremap <F5> :! clear ; ./x*
 nnoremap <F4> :! ./gmake.sh
-nnoremap <F3> :! ./gmake.sh
+nnoremap <F1> :make!
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -191,12 +191,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 43 - ((21 * winheight(0) + 18) / 36)
+let s:l = 1 - ((0 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-43
-normal! 012|
+1
+normal! 0
 tabnext
 edit gardevoir.h
 set splitbelow splitright
@@ -333,7 +333,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 30 - ((20 * winheight(0) + 18) / 36)
+let s:l = 30 - ((29 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -353,8 +353,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 17 + 19) / 38)
-exe '2resize ' . ((&lines * 17 + 19) / 38)
+exe '1resize ' . ((&lines * 29 + 29) / 59)
+exe '2resize ' . ((&lines * 26 + 29) / 59)
 argglobal
 1argu
 if bufexists("gardevoir.h") | buffer gardevoir.h | else | edit gardevoir.h | endif
@@ -482,7 +482,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 30 - ((5 * winheight(0) + 8) / 17)
+let s:l = 30 - ((9 * winheight(0) + 14) / 29)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -615,15 +615,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 24 - ((14 * winheight(0) + 8) / 17)
+let s:l = 24 - ((0 * winheight(0) + 13) / 26)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 24
 normal! 070|
 wincmd w
-exe '1resize ' . ((&lines * 17 + 19) / 38)
-exe '2resize ' . ((&lines * 17 + 19) / 38)
+exe '1resize ' . ((&lines * 29 + 29) / 59)
+exe '2resize ' . ((&lines * 26 + 29) / 59)
 tabnext
 edit ralts.c
 set splitbelow splitright
@@ -638,8 +638,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 17 + 19) / 38)
-exe '2resize ' . ((&lines * 17 + 19) / 38)
+exe '1resize ' . ((&lines * 49 + 29) / 59)
+exe '2resize ' . ((&lines * 6 + 29) / 59)
 argglobal
 if bufexists("ralts.c") | buffer ralts.c | else | edit ralts.c | endif
 setlocal keymap=
@@ -766,7 +766,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 21 - ((0 * winheight(0) + 8) / 17)
+let s:l = 21 - ((0 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -899,15 +899,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 8) / 17)
+let s:l = 1 - ((0 * winheight(0) + 3) / 6)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 017|
 wincmd w
-exe '1resize ' . ((&lines * 17 + 19) / 38)
-exe '2resize ' . ((&lines * 17 + 19) / 38)
+exe '1resize ' . ((&lines * 49 + 29) / 59)
+exe '2resize ' . ((&lines * 6 + 29) / 59)
 tabnext
 edit pokemon_data_2.txt
 set splitbelow splitright
@@ -1045,7 +1045,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((6 * winheight(0) + 18) / 36)
+let s:l = 10 - ((9 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
