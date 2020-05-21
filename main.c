@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "gardevoir.h"
+#include "ralts.h"
 
 #define debug 1//debug==1 yup
 

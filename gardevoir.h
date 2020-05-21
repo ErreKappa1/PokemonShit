@@ -23,11 +23,10 @@ typedef struct{
 	Stats stats;
 	int gen;
 	char legg[5+1];
-	int readable;
+	int read;
 } Pokemon;
 
 void helloWorldFn();
-int loadFileFn(Pokemon **db, char fileName[], int debug);//load the content of the file into **db
 void printDbFn(Pokemon *db, int nr, int debug);//read db and print everything to stdout
 void printPkmnName(Pokemon *db, int nr, int debug, char goalPkmn[]);//print a single line of the db based on the first parameter
 
