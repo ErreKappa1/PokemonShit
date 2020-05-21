@@ -33,4 +33,3 @@ int loadFileFn(Pokemon **db, char fileName[], int debug){
 
 	return nr;
 }
-

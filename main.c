@@ -43,7 +43,7 @@ int main(void){
 			case 3://Print the selected pokemon info (Still as a reference)
 				system(clear);
 				printf("\nPrint the selected pokemon info (Still as a reference)\n");
-				printPkmnName(db, nr, debug, goalPkmn);//print a single line of the db based on the first parameter
+				printPkmnNameFn(db, nr, debug, goalPkmn);//print a single line of the db based on the first parameter
 				printf("\n");
 				system(sleep);
 				system(clear);

@@ -4,10 +4,11 @@ let s:cpo_save=&cpo
 set cpo&vim
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
-map z<Up> Oj
-map z<Down> ok
-map zO O
 map zo o
+map zO O
+map z<Down> ok
+map z<Up> Oj
+nnoremap <F1> :make!
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
 nnoremap <F12> :tabe
@@ -15,7 +16,7 @@ nnoremap <F10> :source Vim/current.vim
 nnoremap <F9> :mksession! Vim/current.vim
 nnoremap <F5> :! clear ; ./x*
 nnoremap <F4> :! ./gmake.sh
-nnoremap <F1> :make!
+nnoremap <F3> :! ./gmake.sh
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -190,12 +191,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 17 - ((16 * winheight(0) + 28) / 57)
+let s:l = 43 - ((21 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
-normal! 037|
+43
+normal! 012|
 tabnext
 edit gardevoir.h
 set splitbelow splitright
@@ -332,12 +333,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 26 - ((25 * winheight(0) + 28) / 57)
+let s:l = 30 - ((20 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-26
-normal! 05|
+30
+normal! 020|
 tabnext
 edit gardevoir.h
 set splitbelow splitright
@@ -352,8 +353,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 28 + 29) / 59)
-exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe '1resize ' . ((&lines * 17 + 19) / 38)
+exe '2resize ' . ((&lines * 17 + 19) / 38)
 argglobal
 1argu
 if bufexists("gardevoir.h") | buffer gardevoir.h | else | edit gardevoir.h | endif
@@ -481,12 +482,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 14) / 28)
+let s:l = 30 - ((5 * winheight(0) + 8) / 17)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+30
+normal! 037|
 wincmd w
 argglobal
 1argu
@@ -614,15 +615,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 32 - ((23 * winheight(0) + 13) / 27)
+let s:l = 24 - ((14 * winheight(0) + 8) / 17)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-32
-normal! 020|
+24
+normal! 070|
 wincmd w
-exe '1resize ' . ((&lines * 28 + 29) / 59)
-exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe '1resize ' . ((&lines * 17 + 19) / 38)
+exe '2resize ' . ((&lines * 17 + 19) / 38)
 tabnext
 edit ralts.c
 set splitbelow splitright
@@ -637,8 +638,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 28 + 29) / 59)
-exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe '1resize ' . ((&lines * 17 + 19) / 38)
+exe '2resize ' . ((&lines * 17 + 19) / 38)
 argglobal
 if bufexists("ralts.c") | buffer ralts.c | else | edit ralts.c | endif
 setlocal keymap=
@@ -765,12 +766,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 29 - ((21 * winheight(0) + 14) / 28)
+let s:l = 21 - ((0 * winheight(0) + 8) / 17)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-29
-normal! 021|
+21
+normal! 052|
 wincmd w
 argglobal
 if bufexists("ralts.h") | buffer ralts.h | else | edit ralts.h | endif
@@ -898,15 +899,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 6 - ((5 * winheight(0) + 13) / 27)
+let s:l = 1 - ((0 * winheight(0) + 8) / 17)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-6
-normal! 06|
+1
+normal! 017|
 wincmd w
-exe '1resize ' . ((&lines * 28 + 29) / 59)
-exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe '1resize ' . ((&lines * 17 + 19) / 38)
+exe '2resize ' . ((&lines * 17 + 19) / 38)
 tabnext
 edit pokemon_data_2.txt
 set splitbelow splitright
@@ -1044,7 +1045,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((9 * winheight(0) + 28) / 57)
+let s:l = 10 - ((6 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1053,13 +1054,13 @@ normal! 0
 tabnext 4
 set stal=1
 badd +1 gardevoir.c
-badd +0 main.c
+badd +1 main.c
 badd +1 pokemonShit.c
-badd +0 gardevoir.h
+badd +1 gardevoir.h
+badd +1 ralts.c
 badd +10 pokemon_data_2.txt
-badd +0 pokemon_data.txt
-badd +0 ralts.h
-badd +0 ralts.c
+badd +1 ralts.h
+badd +1 pokemon_data.txt
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -1071,6 +1072,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

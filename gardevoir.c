@@ -21,7 +21,7 @@ void printDbFn(Pokemon *db, int nr, int debug){
 }
 
 
-void printPkmnName(Pokemon *db, int nr, int debug, char goalPkmn[]){
+void printPkmnNameFn(Pokemon *db, int nr, int debug, char goalPkmn[]){
 
 	int i;//random index name
 

@@ -28,6 +28,6 @@ typedef struct{
 
 void helloWorldFn();
 void printDbFn(Pokemon *db, int nr, int debug);//read db and print everything to stdout
-void printPkmnName(Pokemon *db, int nr, int debug, char goalPkmn[]);//print a single line of the db based on the first parameter
+void printPkmnNameFn(Pokemon *db, int nr, int debug, char goalPkmn[]);//print a single line of the db based on the first parameter
 
 #endif
