@@ -1327,15 +1327,15 @@ normal! zt
 normal! 014|
 tabnext 3
 set stal=1
-badd +1 pokemonShit.c
-badd +1 gardevoir.h
-badd +1 gardevoir.c
-badd +1 ralts.h
 badd +1 ralts.c
-badd +1 pokemon_data.txt
-badd +1 types.txt
+badd +1 pokemonShit.c
+badd +1 gardevoir.c
 badd +1 pokemon_data_2.txt
-badd +0 Makefile
+badd +1 Makefile
+badd +1 gardevoir.h
+badd +1 ralts.h
+badd +1 types.txt
+badd +1 pokemon_data.txt
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
