@@ -52,7 +52,7 @@ tabnew
 tabnew
 tabnew
 tabrewind
-edit ralts.c
+edit pokemonShit.c
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -466,12 +466,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 20 - ((14 * winheight(0) + 14) / 28)
+let s:l = 5 - ((4 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-20
-normal! 016|
+5
+normal! 0
 wincmd w
 exe '1resize ' . ((&lines * 27 + 29) / 59)
 exe '2resize ' . ((&lines * 28 + 29) / 59)
@@ -777,9 +777,9 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 18 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 119 + 119) / 238)
+exe 'vert 1resize ' . ((&columns * 58 + 59) / 118)
 exe '2resize ' . ((&lines * 18 + 29) / 59)
-exe 'vert 2resize ' . ((&columns * 118 + 119) / 238)
+exe 'vert 2resize ' . ((&columns * 59 + 59) / 118)
 exe '3resize ' . ((&lines * 37 + 29) / 59)
 argglobal
 setlocal keymap=
@@ -1180,9 +1180,9 @@ normal! zt
 normal! 0
 wincmd w
 exe '1resize ' . ((&lines * 18 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 119 + 119) / 238)
+exe 'vert 1resize ' . ((&columns * 58 + 59) / 118)
 exe '2resize ' . ((&lines * 18 + 29) / 59)
-exe 'vert 2resize ' . ((&columns * 118 + 119) / 238)
+exe 'vert 2resize ' . ((&columns * 59 + 59) / 118)
 exe '3resize ' . ((&lines * 37 + 29) / 59)
 tabnext
 edit Makefile
@@ -1327,7 +1327,7 @@ normal! zt
 normal! 014|
 tabnext 3
 set stal=1
-badd +1 ralts.c
+badd +7 ralts.c
 badd +1 pokemonShit.c
 badd +1 gardevoir.c
 badd +1 pokemon_data_2.txt

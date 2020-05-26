@@ -9,14 +9,13 @@ int loadFileFn(Pokemon **db, char fileName[], int debug){
 
 	FILE *fp0;//pointer to types
 	FILE *fp1;//pointer to pokemon data
-	int yesNo;//debugging switch
 	int nr=0;//number of rows
 	int index0=0;//index to acquire the list of available pokemon types
 	int index1=0;//data acquiring mechanism main for index
 	int i=0;//data acquiring mechanism second for
 	int flag0=1;//data acquiring mechanism main while
 	int flag1=0;//data acquiring mechanism first if
-	char types[8+1][nTypes];
+	char types[nTypes][8+1];//array that will contain every possible pokemon type
 	char temp[20];//buffer to manage the multi-string names
 
 	if(debug)
@@ -31,16 +30,8 @@ int loadFileFn(Pokemon **db, char fileName[], int debug){
 	while(fscanf(fp0, "%s", types[index0])!=EOF){//scanning for pokemon types
 		index0++;
 	}
-	if(debug){
+	if(debug)
 		printf("\nAquired %d lines from types.txt", index0);
-		/*
-		printf("\nWanna si the types? (Yes==1)\n");
-		scanf("%d", &yesNo);
-		if(yesNo)
-			for(i=0; i<nTypes; i++)
-				printf("\n%s", types[i]);
-				*/
-	}
 	fp1=fopen(fileName, "r");//file opening
 	if(fp1==NULL){//check if the file actually exist
 		printf("\nThe file does not exist");
