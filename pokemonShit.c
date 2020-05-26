@@ -15,9 +15,10 @@ int main(void){
 	char goalPkmn[40+1]={0};
 
 	nr=loadPkmnFn(&db, "pokemon_data.txt", debug);//load the file into the db
-	if(debug)
+	if(debug){
 		printf("\nNumber of lines %d", nr);
-	system(sleep);
+		system(sleep);
+	}
 	system(clear);
 	while(stop){
 		printf("\nInsert a command:\n1)\tPrint the list of all available Pokemon\n2)\tSelect a pokemon (Only as a reference to the user)\n3)\tPrint the selected pokemon info (Still as a reference)\n0)\tExit\n--------------------------------------------------------------\n\n\n");//main menu output
