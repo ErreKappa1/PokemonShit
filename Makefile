@@ -1,3 +1,3 @@
 all:
-	gcc -Wall -fno-stack-protector -g *.c -o xPokemonShit
+	gcc -Wall -g *.c -o xPokemonShit
 

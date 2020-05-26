@@ -2,11 +2,11 @@
 1 Bulbasaur Grass Poison 45 49 49 65 65 45 1 FALSE
 2 Ivysaur Grass Poison 60 62 63 80 80 60 1 FALSE
 3 Venusaur Grass Poison 80 82 83 100 100 80 1 FALSE
-4 Charmander Fire Null 39 52 43 60 50 65 1 FALSE
-5 Charmeleon Fire Null 58 64 58 80 65 80 1 FALSE
+4 Charmander Fire 39 52 43 60 50 65 1 FALSE
+5 Charmeleon Fire 58 64 58 80 65 80 1 FALSE
 6 Charizard Fire Flying 78 84 78 109 85 100 1 FALSE
 6 CharizardMega Charizard X Fire Dragon 78 130 111 130 85 100 1 FALSE
 6 CharizardMega Charizard Y Fire Flying 78 104 78 159 115 100 1	FALSE
-7 Squirtle Water Null 44 48 65 50 64 43 1 FALSE
-8 Wartortle Water Null 59 63 80 65 80 58 1 FALSE
-9 Blastoise Water Null 79 83 100 85 105 78 1 FALSE
+7 Squirtle Water 44 48 65 50 64 43 1 FALSE
+8 Wartortle Water 59 63 80 65 80 58 1 FALSE
+9 Blastoise Water 79 83 100 85 105 78 1 FALSE
