@@ -8,9 +8,10 @@ map z<Up> Oj
 map z<Down> ok
 map zO O
 map zo o
+nnoremap <F11> :! ~/Coding/Bash/randomScript/vimPull.sh
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
-nnoremap <F12> :tabe
+nnoremap <F12> :! ~/Coding/Bash/randomScript/vimPush.sh
 nnoremap <F10> :source Vim/current.vim
 nnoremap <F9> :mksession! Vim/current.vim
 nnoremap <F5> :! clear ; ./x*
@@ -186,12 +187,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 28) / 57)
+let s:l = 17 - ((16 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+17
+normal! 037|
 tabnext
 edit gardevoir.c
 set splitbelow splitright
@@ -333,11 +334,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 13) / 27)
+let s:l = 10 - ((9 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+10
 normal! 0
 wincmd w
 argglobal
@@ -466,11 +467,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 5 - ((4 * winheight(0) + 14) / 28)
+let s:l = 9 - ((8 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
+9
 normal! 0
 wincmd w
 exe '1resize ' . ((&lines * 27 + 29) / 59)
@@ -616,12 +617,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 26 - ((8 * winheight(0) + 24) / 49)
+let s:l = 91 - ((39 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-26
-normal! 017|
+91
+normal! 032|
 wincmd w
 argglobal
 if bufexists("ralts.h") | buffer ralts.h | else | edit ralts.h | endif
@@ -777,9 +778,9 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 18 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 58 + 59) / 118)
+exe 'vert 1resize ' . ((&columns * 118 + 119) / 238)
 exe '2resize ' . ((&lines * 18 + 29) / 59)
-exe 'vert 2resize ' . ((&columns * 59 + 59) / 118)
+exe 'vert 2resize ' . ((&columns * 119 + 119) / 238)
 exe '3resize ' . ((&lines * 37 + 29) / 59)
 argglobal
 setlocal keymap=
@@ -906,12 +907,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((9 * winheight(0) + 9) / 18)
+let s:l = 12 - ((11 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
-normal! 027|
+12
+normal! 019|
 wincmd w
 argglobal
 if bufexists("types.txt") | buffer types.txt | else | edit types.txt | endif
@@ -1180,9 +1181,9 @@ normal! zt
 normal! 0
 wincmd w
 exe '1resize ' . ((&lines * 18 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 58 + 59) / 118)
+exe 'vert 1resize ' . ((&columns * 118 + 119) / 238)
 exe '2resize ' . ((&lines * 18 + 29) / 59)
-exe 'vert 2resize ' . ((&columns * 59 + 59) / 118)
+exe 'vert 2resize ' . ((&columns * 119 + 119) / 238)
 exe '3resize ' . ((&lines * 37 + 29) / 59)
 tabnext
 edit Makefile
@@ -1325,11 +1326,11 @@ exe s:l
 normal! zt
 2
 normal! 014|
-tabnext 3
+tabnext 1
 set stal=1
-badd +7 ralts.c
 badd +1 pokemonShit.c
 badd +1 gardevoir.c
+badd +1 ralts.c
 badd +1 pokemon_data_2.txt
 badd +1 Makefile
 badd +1 gardevoir.h
@@ -1347,7 +1348,6 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
