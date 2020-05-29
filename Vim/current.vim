@@ -8,10 +8,10 @@ map z<Up> Oj
 map z<Down> ok
 map zO O
 map zo o
-nnoremap <F11> :! ~/Coding/Bash/randomScript/vimPull.sh
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
 nnoremap <F12> :! ~/Coding/Bash/randomScript/vimPush.sh
+nnoremap <F11> :! ~/Coding/Bash/randomScript/vimPull.sh
 nnoremap <F10> :source Vim/current.vim
 nnoremap <F9> :mksession! Vim/current.vim
 nnoremap <F5> :! clear ; ./x*
@@ -187,12 +187,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 17 - ((16 * winheight(0) + 28) / 57)
+let s:l = 54 - ((47 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
-normal! 037|
+54
+normal! 018|
 tabnext
 edit gardevoir.c
 set splitbelow splitright
@@ -617,12 +617,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 91 - ((39 * winheight(0) + 24) / 49)
+let s:l = 92 - ((45 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-91
-normal! 032|
+92
+normal! 0
 wincmd w
 argglobal
 if bufexists("ralts.h") | buffer ralts.h | else | edit ralts.h | endif
@@ -1326,9 +1326,9 @@ exe s:l
 normal! zt
 2
 normal! 014|
-tabnext 1
+tabnext 3
 set stal=1
-badd +1 pokemonShit.c
+badd +0 pokemonShit.c
 badd +1 gardevoir.c
 badd +1 ralts.c
 badd +1 pokemon_data_2.txt

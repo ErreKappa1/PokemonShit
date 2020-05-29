@@ -8,16 +8,19 @@
 int loadPkmnFn(Pokemon **db, char fileName[], int debug){
 
 	//TODO Reorder variables
+	//loading Types:
 	FILE *fp0;//pointer to types
+	int index0=0;//index to acquire the list of available pokemon types
+	char types[nTypes][8+1];//array that will contain every possible pokemon type
+
+	//loading Pokemon_data:
 	FILE *fp1;//pointer to pokemon data
 	int nr=0;//number of rows
-	int index0=0;//index to acquire the list of available pokemon types
 	int index1=0;//data acquiring mechanism main for index
-	int i=0;//data acquiring mechanism second for
-	int flag0=1;//data acquiring mechanism main while
-	int flag1=0;//data acquiring mechanism first if
-	char types[nTypes][8+1];//array that will contain every possible pokemon type
 	char temp[30+1];//buffer to manage the multi-string names
+	int flag0=1;//data acquiring mechanism main while
+	int i=0;//data acquiring mechanism second for
+	int flag1=0;//data acquiring mechanism first if
 	int tempPostConv;//same buffer after a conversion using atoi
 
 	if(debug)
@@ -34,7 +37,7 @@ int loadPkmnFn(Pokemon **db, char fileName[], int debug){
 	}
 	if(debug)
 		printf("\nAquired %d lines from types.txt", index0);//end of types loading
-	fp1=fopen(fileName, "r");//file opening
+	fp1=fopen(fileName, "r");//opening the pokemon_data file_____________________________
 	if(fp1==NULL){//check if the file actually exist
 		printf("\nThe file does not exist");
 		return -1;
@@ -45,14 +48,6 @@ int loadPkmnFn(Pokemon **db, char fileName[], int debug){
 	*db=calloc(nr, sizeof(Pokemon));//dynamic memory allocation
 	if(debug)
 		printf("\nMemory allocation fine");
-	/*
-	while(fscanf(fp1, "%d\t%s\t%s\t%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%s", &(*db)[index1].id, (*db)[index1].name, (*db)[index1].type1, (*db)[index1].type2, &(*db)[index1].stats.hp, &(*db)[index1].stats.atk, &(*db)[index1].stats.def, &(*db)[index1].stats.spAtk, &(*db)[index1].stats.spDef, &(*db)[index1].stats.spd, &(*db)[index1].gen, (*db)[index1].legg)!=EOF){//data scanning mechanism
-		(*db)[index1].read=1;
-		index1++;
-		if(debug)
-			printf("\n|%d\t|%s\t|%s\t|%s\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%s\t|", (*db)[index1].id, (*db)[index1].name, (*db)[index1].type1, (*db)[index1].type2, (*db)[index1].stats.hp, (*db)[index1].stats.atk, (*db)[index1].stats.def, (*db)[index1].stats.spAtk, (*db)[index1].stats.spDef, (*db)[index1].stats.spd, (*db)[index1].gen, (*db)[index1].legg);
-	}
-	*/
 	strcpy(temp, "");//reset temp buffer to 0
 	for(index1=0; index1<nr; index1++){//repear every on every row
 		fscanf(fp1, "%d\t%s\t", &(*db)[index1].id, (*db)[index1].name);//scan the first section of the row
