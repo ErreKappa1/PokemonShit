@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "gardevoir.h"
+#include "kirlia.h"
 #include "ralts.h"
 
 #define debug 1//debug==1 yup
@@ -51,7 +52,7 @@ int main(void){
 			break;
 			case 4://open the statistic submenu
 				system(clear);
-				//submenu(db, nr, debug);//TODO
+				subMenuWrapperStatsFn(db, nr, debug);//TODO
 				printf("\n");
 				system(sleep);
 				system(clear);

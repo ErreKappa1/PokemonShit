@@ -7,7 +7,6 @@
 
 int loadPkmnFn(Pokemon **db, char fileName[], int debug){
 
-	//TODO Reorder variables
 	//loading Types:
 	FILE *fp0;//pointer to types
 	int index0=0;//index to acquire the list of available pokemon types

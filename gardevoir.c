@@ -31,3 +31,5 @@ void printPkmnNameFn(Pokemon *db, int nr, int debug, char goalPkmn[]){
 		if(strcmp(db[i].name, goalPkmn)==0)
 			printf("\n|%d\t|%s\t|%s\t|%s\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%s\t|", db[i].id, db[i].name, db[i].type1, db[i].type2, db[i].stats.hp, db[i].stats.atk, db[i].stats.def, db[i].stats.spAtk, db[i].stats.spDef, db[i].stats.spd, db[i].gen, db[i].legg);
 }
+
+
