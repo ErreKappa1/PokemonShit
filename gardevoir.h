@@ -17,9 +17,9 @@ typedef struct{
 
 typedef struct{
 	int id;
-	char name[40+1];
-	char type1[10+1];
-	char type2[10+1];
+	char name[30+1];
+	char type1[8+1];
+	char type2[8+1];
 	Stats stats;
 	int gen;
 	char legg[5+1];
