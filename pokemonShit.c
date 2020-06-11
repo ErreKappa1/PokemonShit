@@ -52,9 +52,8 @@ int main(void){
 			break;
 			case 4://open the statistic submenu
 				system(clear);
-				subMenuWrapperStatsFn(db, nr, debug);//TODO
+				subMenuWrapperStatsFn(db, nr, debug);//function to manage submenu
 				printf("\n");
-				system(sleep);
 				system(clear);
 			break;
 			case 0://Exit the program

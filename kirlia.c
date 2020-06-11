@@ -6,9 +6,26 @@
 void subMenuWrapperStatsFn(Pokemon *db, int nr, int debug){
 
 	int stop=1;//flag to manage exit from stats menu
+	int command=0;//switch case flag
 
 	if(debug)
-		printf("\nBeginning of subMenuWrapperStatsFn");
-	printf("\nInsert a command:\n1)\tAverage statistics per generation\n0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");
-	scanf('%d'
+		printf("Beginning of subMenuWrapperStatsFn\n");
+	while(stop){
+		printf("\nInsert a command:\n1)\tAverage statistics per generation\n0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");
+		scanf("%d", &command);
+		printf("\n\n");
+		switch(command){
+			case 1:
+				system(clear);
+				subMenuWrapperStatsFn(db, nr, debug);//function to manage submenu
+				printf("\n");
+				system(sleep);
+				system(clear);
+			break;
+			case 0://Exit the program
+				system(clear);
+				stop=0;
+			break;
+		}
+	}
 }
