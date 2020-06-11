@@ -9,5 +9,5 @@ void subMenuWrapperStatsFn(Pokemon *db, int nr, int debug){//TODO
 
 	if(debug)
 		printf("\nBeginning of subMenuWrapperStatsFn");
-	printf("\nInsert a command:\n1)\t
+	printf("\nInsert a command:\n1)\ ");
 }
