@@ -17,7 +17,7 @@ void subMenuWrapperStatsFn(Pokemon *db, int nr, int debug){
 		switch(command){
 			case 1:
 				system(clear);
-				subMenuWrapperStatsFn(db, nr, debug);//function to manage submenu
+				globalAverage(db, nr, debug);//compute global statistics per generation
 				printf("\n");
 				system(sleep);
 				system(clear);
@@ -29,3 +29,9 @@ void subMenuWrapperStatsFn(Pokemon *db, int nr, int debug){
 		}
 	}
 }
+
+
+void globalAverage(Pokemon *db, int nr, int debug){
+
+	if(debug)
+		printf("Beginning of globalAverage\n");

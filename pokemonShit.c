@@ -52,7 +52,7 @@ int main(void){
 			break;
 			case 4://open the statistic submenu
 				system(clear);
-				subMenuWrapperStatsFn(db, nr, debug);//function to manage submenu
+				subMenuWrapperStatsFn(db, nr, debug);//function to manage statistics subenu
 				printf("\n");
 				system(clear);
 			break;
