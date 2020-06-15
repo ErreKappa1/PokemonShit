@@ -35,3 +35,5 @@ void globalAverage(Pokemon *db, int nr, int debug){
 
 	if(debug)
 		printf("Beginning of globalAverage\n");
+	
+}
