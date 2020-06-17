@@ -3,6 +3,18 @@
 #include <string.h>
 #include "gardevoir.h"
 
+
+void globalAverageFn(Pokemon *db, int nr, int debug){
+
+	Pokemon currentAvg;//average value of pokemon in the current generation
+	int pokemonPerGeneration=0;//number of pokemon in the current generation
+
+	if(debug)
+		printf("Beginning of globalAverage\n");
+	//setToZeroPkmnFn(&currentAvg, debug);
+}
+
+
 void subMenuWrapperStatsFn(Pokemon *db, int nr, int debug){
 
 	int stop=1;//flag to manage exit from stats menu
@@ -17,7 +29,7 @@ void subMenuWrapperStatsFn(Pokemon *db, int nr, int debug){
 		switch(command){
 			case 1:
 				system(clear);
-				globalAverage(db, nr, debug);//compute global statistics per generation
+				globalAverageFn(db, nr, debug);//compute global statistics per generation
 				printf("\n");
 				system(sleep);
 				system(clear);
@@ -30,10 +42,3 @@ void subMenuWrapperStatsFn(Pokemon *db, int nr, int debug){
 	}
 }
 
-
-void globalAverage(Pokemon *db, int nr, int debug){
-
-	if(debug)
-		printf("Beginning of globalAverage\n");
-	
-}

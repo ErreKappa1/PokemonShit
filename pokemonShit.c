@@ -13,7 +13,7 @@ int main(void){
 	int nr=0;//number of rows
 	int stop=1;//flag to manage exit from main menu
 	int command=0;//switch case flag
-	char goalPkmn[40+1]={0};
+	char goalPkmn[40+1]={0};//pokemon that the program will find
 
 	nr=loadPkmnFn(&db, "pokemon_data.txt", debug);//load the file into the db
 	if(debug){

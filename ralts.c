@@ -36,7 +36,7 @@ int loadPkmnFn(Pokemon **db, char fileName[], int debug){
 	}
 	if(debug)
 		printf("\nAquired %d lines from types.txt", index0);//end of types loading
-	fp1=fopen(fileName, "r");//opening the pokemon_data file_____________________________
+	fp1=fopen(fileName, "r");//opening the pokemon_data file____________________________________________________________
 	if(fp1==NULL){//check if the file actually exist
 		printf("\nThe file does not exist");
 		return -1;
