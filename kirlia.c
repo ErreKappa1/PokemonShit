@@ -11,7 +11,7 @@ void globalAverageFn(Pokemon *db, int nr, int debug){
 
 	if(debug)
 		printf("Beginning of globalAverage\n");
-	//setToZeroPkmnFn(&currentAvg, debug);
+	setToZeroPkmnFn(&currentAvg, debug);
 }
 
 

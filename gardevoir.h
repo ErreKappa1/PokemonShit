@@ -30,5 +30,5 @@ void helloWorldFn();
 void printPkmnFn(Pokemon var, int debug);//read a pokemon variable and print it to stdout
 void printDbFn(Pokemon *db, int nr, int debug);//read db and print everything to stdout
 void printPkmnNameFn(Pokemon *db, int nr, int debug, char goalPkmn[]);//print a single line of the db based on the first parameter
-//void setToZeroPkmnFn(Pokemon *var, int debug);//set to zero a generic Pokemon variable 
+void setToZeroPkmnFn(Pokemon *var, int debug);//set to zero a generic Pokemon variable 
 #endif
