@@ -9,9 +9,14 @@ void globalAverageFn(Pokemon *db, int nr, int debug){
 	Pokemon currentAvg;//average value of pokemon in the current generation
 	int pokemonPerGeneration=0;//number of pokemon in the current generation
 
-	if(debug)
+	if(debug){
 		printf("Beginning of globalAverage\n");
+		printf("\nPrint before");
+		printPkmnFn(currentAvg);
+	}
 	setToZeroPkmnFn(&currentAvg, debug);
+	if(debug)
+		printPkmnFn(currentAvg);
 }
 
 
