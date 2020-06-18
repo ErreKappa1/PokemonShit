@@ -36,6 +36,7 @@ set softtabstop=4
 set suffixes=.bak,~,.o,.info,.swp,.aux,.bbl,.blg,.brf,.cb,.dvi,.idx,.ilg,.ind,.inx,.jpg,.log,.out,.png,.toc
 set tabstop=4
 set undodir=~/.cache/vim/undo//
+set window=58
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -341,7 +342,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 46
-normal! 016|
+normal! 0
 wincmd w
 argglobal
 if bufexists("gardevoir.h") | buffer gardevoir.h | else | edit gardevoir.h | endif
@@ -492,8 +493,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 44 + 29) / 59)
-exe '2resize ' . ((&lines * 11 + 29) / 59)
+exe '1resize ' . ((&lines * 48 + 29) / 59)
+exe '2resize ' . ((&lines * 7 + 29) / 59)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -619,12 +620,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 14 - ((10 * winheight(0) + 22) / 44)
+let s:l = 24 - ((22 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-14
-normal! 05|
+24
+normal! 08|
 wincmd w
 argglobal
 if bufexists("kirlia.h") | buffer kirlia.h | else | edit kirlia.h | endif
@@ -752,15 +753,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((1 * winheight(0) + 5) / 11)
+let s:l = 2 - ((0 * winheight(0) + 3) / 7)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 2
 normal! 02|
 wincmd w
-exe '1resize ' . ((&lines * 44 + 29) / 59)
-exe '2resize ' . ((&lines * 11 + 29) / 59)
+exe '1resize ' . ((&lines * 48 + 29) / 59)
+exe '2resize ' . ((&lines * 7 + 29) / 59)
 tabnext
 edit ralts.c
 set splitbelow splitright
@@ -1468,7 +1469,7 @@ exe s:l
 normal! zt
 2
 normal! 014|
-tabnext 2
+tabnext 3
 set stal=1
 badd +1 pokemonShit.c
 badd +1 gardevoir.c
@@ -1492,6 +1493,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
