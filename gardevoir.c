@@ -46,6 +46,9 @@ void printPkmnNameFn(Pokemon *db, int nr, int debug, char goalPkmn[]){
 
 
 void setToZeroPkmnFn(Pokemon *var, int debug){
+
+	if(debug)
+		printf("\nBeginning setToZeroPkmnFn");
 	(*var).id=0;
 	strcpy((*var).name, "");
 	strcpy((*var).type1, "");
@@ -56,4 +59,21 @@ void setToZeroPkmnFn(Pokemon *var, int debug){
 	(*var).stats.spAtk=0;
 	(*var).stats.spDef=0;
 	(*var).stats.spd=0;
+}
+
+
+Pokemon addPkmnValuesFn(Pokemon first, Pokemon second, int debug){
+
+	Pokemon sum;
+
+	if(debug)
+		printf("\nBeginning addPkmnValuesFn");
+	sum.stats.hp=first.stats.hp+second.stats.hp;
+	sum.stats.atk=first.stats.atk+second.stats.atk;
+	sum.stats.def=first.stats.def+second.stats.def;
+	sum.stats.spAtk=first.stats.spAtk+second.stats.spAtk;
+	sum.stats.spDef=first.stats.spDef+second.stats.spDef;
+	sum.stats.spd=first.stats.spd+second.stats.spd;
+
+	return sum;
 }

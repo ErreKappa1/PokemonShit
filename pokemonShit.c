@@ -60,6 +60,12 @@ int main(void){
 				system(clear);
 				stop=0;
 			break;
+			default://any other value return an error
+				system(clear);
+				printf("\nIncorrect value; Returning to main menu\n");
+				printf("\n");
+				system(sleep);
+				system(clear);
 		}
 	}
 	free(db);

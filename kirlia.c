@@ -10,22 +10,27 @@ void globalAverageFn(Pokemon *db, int nr, int debug){
 	int pokemonPerGeneration=0;//number of pokemon in the current generation
 	int i=0;//cycle index
 	int currentGen=1;//current generation during processing
+	int numPkmnPerGen=0;//number of pokemon in the current generation
 
 	if(debug){
 		printf("Beginning of globalAverage\n");
 		printf("\nPrint before");
 		printPkmnFn(currentAvg, debug);
 	}
-	setToZeroPkmnFn(&currentAvg, debug);
+	setToZeroPkmnFn(&currentAvg, debug);//set currentAvg to 0
+	currentAvg.read=0;
 	if(debug)
 		printPkmnFn(currentAvg, debug);
-	numGenerations=db[nr].gen;
-	for(i=0; i<nr; i++){
-		
-		if(db[i].gen=currentGen+1){
-			printf("\nNumber of pokemon prensent in the %d generation:\t%d", currentGen
+	for(i=0; i<nr; i++){//TODO debug this cycle
+		currentAvg=addPkmnValuesFn(currentAvg, db[i], debug);
+		numPkmnPerGen++;
+		if((db[i].gen)=currentGen+1){
+			printf("\nNumber of pokemon prensent in the %d generation:\t%d", currentGen, numPkmnPerGen);
 			setToZeroPkmnFn(&currentAvg, debug);
+			currentGen++;
+			numPkmnPerGen=0;
 		}
+	}
 }
 
 
