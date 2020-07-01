@@ -5,7 +5,7 @@
 #include "kirlia.h"
 #include "ralts.h"
 
-#define debug 1//debug==1 yup
+#define debug 0//debug==1 yup
 
 int main(void){
 
