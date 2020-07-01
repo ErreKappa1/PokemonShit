@@ -45,7 +45,7 @@ void printPkmnNameFn(Pokemon *db, int nr, int debug, char goalPkmn[]){
 }
 
 
-void setToZeroPkmnFn(Pokemon *var, int debug){
+void setPkmnToZeroFn(Pokemon *var, int debug){
 
 	if(debug)
 		printf("\nBeginning setToZeroPkmnFn");
@@ -59,6 +59,9 @@ void setToZeroPkmnFn(Pokemon *var, int debug){
 	(*var).stats.spAtk=0;
 	(*var).stats.spDef=0;
 	(*var).stats.spd=0;
+	(*var).gen=0;
+	strcpy((*var).legg, "");
+	(*var).read=0;
 }
 
 
