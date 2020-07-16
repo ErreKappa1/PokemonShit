@@ -1,0 +1,1 @@
+Replace menues with enum menues, way more clean

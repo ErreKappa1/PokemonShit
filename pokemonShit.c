@@ -5,7 +5,7 @@
 #include "kirlia.h"
 #include "ralts.h"
 
-#define debug 1//debug==1 yup
+#define debug 0//debug==1 yup
 
 int main(void){
 
@@ -13,7 +13,7 @@ int main(void){
 	int nr=0;//number of rows
 	int stop=1;//flag to manage exit from main menu
 	int command=0;//switch case flag
-	char goalPkmn[40+1]={0};
+	char goalPkmn[40+1]={0};//pokemon that the program will find
 
 	nr=loadPkmnFn(&db, "pokemon_data.txt", debug);//load the file into the db
 	if(debug){
@@ -52,15 +52,20 @@ int main(void){
 			break;
 			case 4://open the statistic submenu
 				system(clear);
-				subMenuWrapperStatsFn(db, nr, debug);//TODO
+				subMenuWrapperStatsFn(db, nr, debug);//function to manage statistics subenu
 				printf("\n");
-				system(sleep);
 				system(clear);
 			break;
 			case 0://Exit the program
 				system(clear);
 				stop=0;
 			break;
+			default://any other value return an error
+				system(clear);
+				printf("\nIncorrect value; Returning to main menu\n");
+				printf("\n");
+				system(sleep);
+				system(clear);
 		}
 	}
 	free(db);

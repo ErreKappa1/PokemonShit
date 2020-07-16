@@ -36,7 +36,7 @@ int loadPkmnFn(Pokemon **db, char fileName[], int debug){
 	}
 	if(debug)
 		printf("\nAquired %d lines from types.txt", index0);//end of types loading
-	fp1=fopen(fileName, "r");//opening the pokemon_data file_____________________________
+	fp1=fopen(fileName, "r");//opening the pokemon_data file____________________________________________________________
 	if(fp1==NULL){//check if the file actually exist
 		printf("\nThe file does not exist");
 		return -1;
@@ -48,7 +48,7 @@ int loadPkmnFn(Pokemon **db, char fileName[], int debug){
 	if(debug)
 		printf("\nMemory allocation fine");
 	strcpy(temp, "");//reset temp buffer to 0
-	for(index1=0; index1<nr; index1++){//repear every on every row
+	for(index1=0; index1<nr; index1++){//repear every on every row  WAAAY TO COMPLEX, REVIEW NEEDED
 		fscanf(fp1, "%d\t%s\t", &(*db)[index1].id, (*db)[index1].name);//scan the first section of the row
 		while(flag0){
 			fscanf(fp1, "%s\t", temp);//aquire a string to test if it's a type or a part of the name
