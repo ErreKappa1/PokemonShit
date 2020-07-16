@@ -7,10 +7,10 @@ struct{
 	struct Node *next;
 } Node;
 
-struct node *head=NULL;
+struct Node *head=NULL;
 
-struct node *current=NULL;
+struct Node *current=NULL;
 
-void printList(){//display the list
+void printList();//display the list
 
 #endif
