@@ -26,7 +26,7 @@ void globalAverageFn(Pokemon *db, int nr, int debug){
 	for(i=0; i<nr; i++){//cycle on every given pokemon
 		currentAvg=addPkmnStatsFn(currentAvg, db[i].stats, debug);//act as an accumulator of every stat, used to evaluate AVGs
 		numPkmnPerGen++;//count the number of pokemon per generation
-		if(db[i].gen==currentGen+1 ){//print condition, once per gen
+		if(db[i].gen==currentGen+1 || i==nr-1){//print condition, once per gen
 			currentAvg=divPkmnStatsByNumFn(currentAvg, numPkmnPerGen, debug);
 			printf("\nNumber of pokemon prensent in the %d generation:\t%d", currentGen, numPkmnPerGen);
 			printf("\nAvg values:");
