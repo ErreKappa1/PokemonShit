@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "gardevoir.h"
+#include "megaGardevoir.h"
 
 
 void globalAverageFn(Pokemon *db, int nr, int debug){

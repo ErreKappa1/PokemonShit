@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "gardevoir.h"
+#include "megaGardevoir.h"
 
 #define nTypes 18//number of different pokemon types
 
