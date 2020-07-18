@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "megaGardevoir.h"
+#include "gardevoir.h"
 #include "kirlia.h"
 #include "ralts.h"
 

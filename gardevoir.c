@@ -4,7 +4,7 @@
 #include "megaGardevoir.h"
 #include "gardevoir.h"
 
-
+/*
 void printList(){
 
    struct Node *ptr=head;
@@ -16,3 +16,7 @@ void printList(){
    }
    printf(" ]");
 }
+*/
+
+mainMenu readCommand(){//TODO write dat function
+	
