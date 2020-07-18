@@ -19,9 +19,10 @@ typedef enum{
 		printAll,
 		selectPkmn,
 		printPkmnm,
-		statistics
+		statistics,
+		exit
 } mainMenu
 
-mainMenu readCommand();//read the command from stdin
+mainMenu readCommand();//prompt to the user and read the command from stdin
 
 #endif

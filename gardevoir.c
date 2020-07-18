@@ -19,4 +19,8 @@ void printList(){
 */
 
 mainMenu readCommand(){//TODO write dat function
+
+	char string[10+1];//store the command submitted by the user
+	char optionsTable[5][10+1];//contains every possible option that the user can submit
+
 	
