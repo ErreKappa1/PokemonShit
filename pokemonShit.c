@@ -24,7 +24,7 @@ int main(void){
 	}
 	system(clear);
 	while(stop){
-		command=readCommand();
+		command=readCommandMain();
 		printf("\n\n");
 		switch(command){
 			case printAll://Print the list of all available Pokemon

@@ -2,13 +2,19 @@
 #define _gardevoir_H_
 
 typedef enum{
-		printAll,
-		selectPkmn,
-		printPkmn,
-		statistics,
-		exitTheProgram
+	printAll,
+	selectPkmn,
+	printPkmn,
+	statistics,
+	exitTheProgram
 } mainMenu;
 
-mainMenu readCommand();//prompt to the user and read the command from stdin
+typedef enum{
+	printAvgs,
+	goToMainMenu
+} statsSubMenu;
+
+mainMenu readCommandMain();//prompt to the user and read the command from stdin
+statsSubMenu readCommandSub1();//prompt to the user and read the command from stdin
 
 #endif
