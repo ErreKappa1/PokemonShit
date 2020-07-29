@@ -191,7 +191,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 48 - ((31 * winheight(0) + 17) / 34)
+let s:l = 48 - ((32 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -211,8 +211,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 16 + 18) / 36)
-exe '2resize ' . ((&lines * 16 + 18) / 36)
+exe '1resize ' . ((&lines * 17 + 18) / 37)
+exe '2resize ' . ((&lines * 16 + 18) / 37)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -338,7 +338,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 8) / 16)
+let s:l = 4 - ((3 * winheight(0) + 8) / 17)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -471,15 +471,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((1 * winheight(0) + 8) / 16)
+let s:l = 2 - ((0 * winheight(0) + 8) / 16)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 2
 normal! 013|
 wincmd w
-exe '1resize ' . ((&lines * 16 + 18) / 36)
-exe '2resize ' . ((&lines * 16 + 18) / 36)
+exe '1resize ' . ((&lines * 17 + 18) / 37)
+exe '2resize ' . ((&lines * 16 + 18) / 37)
 tabnext
 edit gardevoir.c
 set splitbelow splitright
@@ -494,8 +494,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 16 + 18) / 36)
-exe '2resize ' . ((&lines * 16 + 18) / 36)
+exe '1resize ' . ((&lines * 17 + 18) / 37)
+exe '2resize ' . ((&lines * 16 + 18) / 37)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -621,7 +621,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 7 - ((6 * winheight(0) + 8) / 16)
+let s:l = 7 - ((6 * winheight(0) + 8) / 17)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -754,15 +754,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((1 * winheight(0) + 8) / 16)
+let s:l = 2 - ((0 * winheight(0) + 8) / 16)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 2
 normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 16 + 18) / 36)
-exe '2resize ' . ((&lines * 16 + 18) / 36)
+exe '1resize ' . ((&lines * 17 + 18) / 37)
+exe '2resize ' . ((&lines * 16 + 18) / 37)
 tabnext
 edit kirlia.c
 set splitbelow splitright
@@ -777,8 +777,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 25 + 18) / 36)
-exe '2resize ' . ((&lines * 7 + 18) / 36)
+exe '1resize ' . ((&lines * 26 + 18) / 37)
+exe '2resize ' . ((&lines * 7 + 18) / 37)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -904,11 +904,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 12) / 25)
+let s:l = 30 - ((14 * winheight(0) + 13) / 26)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+30
 normal! 018|
 wincmd w
 argglobal
@@ -1044,8 +1044,8 @@ normal! zt
 1
 normal! 018|
 wincmd w
-exe '1resize ' . ((&lines * 25 + 18) / 36)
-exe '2resize ' . ((&lines * 7 + 18) / 36)
+exe '1resize ' . ((&lines * 26 + 18) / 37)
+exe '2resize ' . ((&lines * 7 + 18) / 37)
 tabnext
 edit ralts.c
 set splitbelow splitright
@@ -1060,8 +1060,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 30 + 18) / 36)
-exe '2resize ' . ((&lines * 2 + 18) / 36)
+exe '1resize ' . ((&lines * 31 + 18) / 37)
+exe '2resize ' . ((&lines * 2 + 18) / 37)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -1187,7 +1187,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 15) / 30)
+let s:l = 4 - ((3 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1327,8 +1327,8 @@ normal! zt
 6
 normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 30 + 18) / 36)
-exe '2resize ' . ((&lines * 2 + 18) / 36)
+exe '1resize ' . ((&lines * 31 + 18) / 37)
+exe '2resize ' . ((&lines * 2 + 18) / 37)
 tabnext
 edit pokemon_data.txt
 set splitbelow splitright
@@ -1343,8 +1343,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 92 + 72) / 145)
-exe 'vert 2resize ' . ((&columns * 52 + 72) / 145)
+exe 'vert 1resize ' . ((&columns * 81 + 64) / 128)
+exe 'vert 2resize ' . ((&columns * 46 + 64) / 128)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -1470,7 +1470,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 167 - ((16 * winheight(0) + 16) / 33)
+let s:l = 167 - ((16 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1603,15 +1603,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((0 * winheight(0) + 16) / 33)
+let s:l = 10 - ((0 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 10
 normal! 04|
 wincmd w
-exe 'vert 1resize ' . ((&columns * 92 + 72) / 145)
-exe 'vert 2resize ' . ((&columns * 52 + 72) / 145)
+exe 'vert 1resize ' . ((&columns * 81 + 64) / 128)
+exe 'vert 2resize ' . ((&columns * 46 + 64) / 128)
 tabnext
 edit Makefile
 set splitbelow splitright
@@ -1747,27 +1747,27 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((1 * winheight(0) + 17) / 34)
+let s:l = 2 - ((1 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 2
 normal! 014|
-tabnext 3
+tabnext 4
 set stal=1
 badd +1 pokemonShit.c
+badd +1 megaGardevoir.c
 badd +1 gardevoir.c
 badd +1 kirlia.c
 badd +1 ralts.c
 badd +1 pokemon_data.txt
 badd +1 Makefile
+badd +1 megaGardevoir.h
 badd +3 gardevoir.h
 badd +1 kirlia.h
 badd +1 ralts.h
 badd +1 types.txt
 badd +12 pokemon_data_2.txt
-badd +1 megaGardevoir.h
-badd +1 megaGardevoir.c
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -1779,6 +1779,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
