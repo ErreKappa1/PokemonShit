@@ -31,7 +31,7 @@ mainMenu readCommandMain(){
 	printf("\nCommand: ");
 	scanf("%s", string);//scan the command
 	for(index=printAll, j=0; index<exitTheProgram && j<numOpt && strcasecmp(string, optTable[j])!=0; index++, j++);//cycle 
-	//trought the tabcle and stops when the string and the option are equals
+	//trought the table and stops when the string and the option are equals
 
 	return index;
 }
@@ -46,9 +46,6 @@ statsSubMenu readCommandSub1(){
 									"goToMainMenu",};
 	statsSubMenu index;//index used to cycle on the menu
 
-	/*
-		printf("\nInsert a command:\n1)\tAverage statistics per generation\n0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");
-*/
 	printf("\nInsert a command:");
 	printf("\n1)\tAverage statistics per generation");
 	printf("0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");//main menu output
@@ -58,7 +55,7 @@ statsSubMenu readCommandSub1(){
 	printf("\nCommand: ");
 	scanf("%s", string);//scan the command
 	for(index=printAll, j=0; index<exitTheProgram && j<numOpt && strcasecmp(string, optTable[j])!=0; index++, j++);//cycle 
-	//trought the tabcle and stops when the string and the option are equals
+	//trought the table and stops when the string and the option are equals
 
 	return index;
 }
