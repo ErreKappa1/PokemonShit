@@ -6,12 +6,14 @@ typedef enum{
 	selectPkmn,
 	printPkmn,
 	statistics,
-	exitTheProgram
+	exitTheProgram,
+	error
 } mainMenu;
 
 typedef enum{
 	printAvgs,
-	goToMainMenu
+	goToMainMenu,
+	errorError
 } statsSubMenu;
 
 mainMenu readCommandMain();//prompt to the user and read the command from stdin

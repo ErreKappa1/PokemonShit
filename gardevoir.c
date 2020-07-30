@@ -5,7 +5,7 @@
 #include "gardevoir.h"
 
 #define numOpt0 5
-#define numOpt1 2
+#define numOpt1 3
 
 
 mainMenu readCommandMain(){
@@ -31,7 +31,7 @@ mainMenu readCommandMain(){
 		printf("\n%d) %s", j+1, optTable[j]);
 	printf("\nCommand: ");
 	scanf("%s", string);//scan the command
-	for(index=printAll, j=0; index<exitTheProgram && j<numOpt0 && strcasecmp(string, optTable[j])!=0; index++, j++);//cycle 
+	for(index=printAll, j=0; index<error && j<numOpt0 && strcasecmp(string, optTable[j])!=0; index++, j++);//cycle 
 	//trought the table and stops when the string and the option are equals
 
 	return index;
@@ -52,13 +52,13 @@ statsSubMenu readCommandSub1(){
 	*/
 	printf("\nInsert a command:");
 	printf("\n1)\tAverage statistics per generation");
-	printf("0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");//main menu output
+	printf("\n0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");//main menu output
 	printf("\nCommand list:");
 	for(j=0; j<numOpt1; j++)//output the command list
 		printf("\n%d) %s", j+1, optTable[j]);
 	printf("\nCommand: ");
 	scanf("%s", string);//scan the command
-	for(index=printAvgs, j=0; index<goToMainMenu && j<numOpt1 && strcasecmp(string, optTable[j])!=0; index++, j++);//cycle 
+	for(index=printAvgs, j=0; index<errorError && j<numOpt1 && strcasecmp(string, optTable[j])!=0; index++, j++);//cycle 
 	//trought the table and stops when the string and the option are equals
 
 	return index;
