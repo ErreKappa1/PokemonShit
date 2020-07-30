@@ -45,23 +45,22 @@ void globalAverageFn(Pokemon *db, int nr, int debug){
 void subMenuWrapperStatsFn(Pokemon *db, int nr, int debug){
 
 	int stop=1;//flag to manage exit from stats menu
-	int command=0;//switch case flag
+	statsSubMenu command=0;//switch case flag
 
 	if(debug)
 		printf("Beginning of subMenuWrapperStatsFn\n");
 	while(stop){
-		printf("\nInsert a command:\n1)\tAverage statistics per generation\n0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");
-		scanf("%d", &command);
+		command=readCommandSub1();
 		printf("\n\n");
 		switch(command){
-			case 1:
+			case printAvgs:
 				system(clear);
 				globalAverageFn(db, nr, debug);//compute global statistics per generation
 				printf("\n");
 				system(sleep);
 				system(clear);
 			break;
-			case 0://Exit the program
+			case goToMainMenu://Exit the program
 				system(clear);
 				stop=0;
 			break;

@@ -4,15 +4,16 @@
 #include "megaGardevoir.h"
 #include "gardevoir.h"
 
-#define numOpt 5
+#define numOpt0 5
+#define numOpt1 2
 
 
 mainMenu readCommandMain(){
 
-	//static int numOpt=5;
+	//const int numOpt=5;
 	int j=0;//index used to cycle on the options table
 	char string[14+1];//store the command submitted by the user
-	char optTable[numOpt][14+1]={	"printAll",//contains every possible option that the user can submit
+	char optTable[numOpt0][14+1]={	"printAll",//contains every possible option that the user can submit
 									"selectPkmn",
 									"printPkmn",
 									"statistics",
@@ -26,11 +27,11 @@ mainMenu readCommandMain(){
 	printf("\n4)\tStatistics V");
 	printf("\n0)\tExit\n--------------------------------------------------------------\n\n\n");//main menu output
 	printf("\nCommand list:");
-	for(j=0; j<numOpt; j++)//output the command list
+	for(j=0; j<numOpt0; j++)//output the command list
 		printf("\n%d) %s", j+1, optTable[j]);
 	printf("\nCommand: ");
 	scanf("%s", string);//scan the command
-	for(index=printAll, j=0; index<exitTheProgram && j<numOpt && strcasecmp(string, optTable[j])!=0; index++, j++);//cycle 
+	for(index=printAll, j=0; index<exitTheProgram && j<numOpt0 && strcasecmp(string, optTable[j])!=0; index++, j++);//cycle 
 	//trought the table and stops when the string and the option are equals
 
 	return index;
@@ -39,22 +40,25 @@ mainMenu readCommandMain(){
 
 statsSubMenu readCommandSub1(){
 
-	//static int numOpt=5;
+	//const int numOpt=2;
 	int j=0;//index used to cycle on the options table
-	char string[14+1];//store the command submitted by the user
-	char optTable[numOpt][14+1]={	"printAvgs",//contains every possible option that the user can submit
+	char string[12+1];//store the command submitted by the user
+	char optTable[numOpt1][12+1]={	"printAvgs",//contains every possible option that the user can submit
 									"goToMainMenu",};
 	statsSubMenu index;//index used to cycle on the menu
 
+	/*
+		printf("\nInsert a command:\n1)\tAverage statistics per generation\n0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");
+	*/
 	printf("\nInsert a command:");
 	printf("\n1)\tAverage statistics per generation");
 	printf("0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");//main menu output
 	printf("\nCommand list:");
-	for(j=0; j<numOpt; j++)//output the command list
+	for(j=0; j<numOpt1; j++)//output the command list
 		printf("\n%d) %s", j+1, optTable[j]);
 	printf("\nCommand: ");
 	scanf("%s", string);//scan the command
-	for(index=printAll, j=0; index<exitTheProgram && j<numOpt && strcasecmp(string, optTable[j])!=0; index++, j++);//cycle 
+	for(index=printAvgs, j=0; index<goToMainMenu && j<numOpt1 && strcasecmp(string, optTable[j])!=0; index++, j++);//cycle 
 	//trought the table and stops when the string and the option are equals
 
 	return index;
