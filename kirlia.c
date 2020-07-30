@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "megaGardevoir.h"
 #include "gardevoir.h"
 
 
@@ -24,17 +25,17 @@ void globalAverageFn(Pokemon *db, int nr, int debug){
 	if(debug)
 		printPkmnStatsFn(currentAvg, debug);
 	for(i=0; i<nr; i++){//cycle on every given pokemon
-		currentAvg=addPkmnStatsFn(currentAvg, db[i].stats, debug);//act as an accumulator of every stat, used to evaluate AVGs
+		currentAvg=addPkmnStatsFn(currentAvg, db[i].stats, debug);//act as an accumulator of every stat, evaluate AVGs
 		numPkmnPerGen++;//count the number of pokemon per generation
-		if(db[i].gen==currentGen+1 || i==nr-1){//print condition, once per gen
-			currentAvg=divPkmnStatsByNumFn(currentAvg, numPkmnPerGen, debug);
+		if(db[i].gen==currentGen+1 || i==(nr-1)){//print condition, once per gen
+			currentAvg=divPkmnStatsByNumFn(currentAvg, numPkmnPerGen, debug);//update the current avg before printing
 			printf("\nNumber of pokemon prensent in the %d generation:\t%d", currentGen, numPkmnPerGen);
 			printf("\nAvg values:");
 			printPkmnStatsFn(currentAvg, debug);
 			printf("\n");
 			setPkmnStatsToZeroFn(&currentAvg, debug);//resetting every accumulator and counter
 			currentGen++;//updating generatuion index
-			numPkmnPerGen=0;
+			numPkmnPerGen=0;//reset the number of pokemo per gen
 		}
 	}
 	printf("\nTotal analyzed Pokemon: %d", i);
@@ -44,26 +45,31 @@ void globalAverageFn(Pokemon *db, int nr, int debug){
 void subMenuWrapperStatsFn(Pokemon *db, int nr, int debug){
 
 	int stop=1;//flag to manage exit from stats menu
-	int command=0;//switch case flag
+	statsSubMenu command=0;//switch case flag
 
 	if(debug)
 		printf("Beginning of subMenuWrapperStatsFn\n");
 	while(stop){
-		printf("\nInsert a command:\n1)\tAverage statistics per generation\n0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");
-		scanf("%d", &command);
+		command=readCommandSub1();
 		printf("\n\n");
 		switch(command){
-			case 1:
+			case printAvgs:
 				system(clear);
 				globalAverageFn(db, nr, debug);//compute global statistics per generation
 				printf("\n");
 				system(sleep);
 				system(clear);
 			break;
-			case 0://Exit the program
+			case goToMainMenu://Exit the program
 				system(clear);
 				stop=0;
 			break;
+			default://any other value return an error
+				system(clear);
+				printf("\nIncorrect value; Returning to statistics subMenu\n");
+				printf("\n");
+				system(sleep);
+				system(clear);
 		}
 	}
 }
