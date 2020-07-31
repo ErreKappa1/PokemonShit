@@ -46,10 +46,8 @@ statsSubMenu readCommandSub1(){
 	char optTable[numOpt1][12+1]={	"printAvgs",//contains every possible option that the user can submit
 									"goToMainMenu",};
 	statsSubMenu index;//index used to cycle on the menu
+	NodePkmnStats * head=NULL;
 
-	/*
-		printf("\nInsert a command:\n1)\tAverage statistics per generation\n0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");
-	*/
 	printf("\nInsert a command:");
 	printf("\n1)\tAverage statistics per generation");
 	printf("\n0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");//main menu output
