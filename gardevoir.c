@@ -48,7 +48,11 @@ statsSubMenu readCommandSub1(){
 	statsSubMenu index;//index used to cycle on the menu
 	NodePkmnStats * head=NULL;
 
-	printf("\nInsert a command:");
+	head=(NodePkmnStats *) malloc(sizeof(NodePkmnStats));
+	if(head==NULL){
+		return 1;
+	}
+	(printf("\nInsert a command:");
 	printf("\n1)\tAverage statistics per generation");
 	printf("\n0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");//main menu output
 	printf("\nCommand list:");
