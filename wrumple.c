@@ -28,20 +28,21 @@ void printList(Node_t *head){
 }
 
 
-/*
-void pushBeg(Node_t **head){//unused
+void pushBeg(Node_t **head, Stats date){
 
 	Node_t *newHead;
 	
 	newHead=(Node_t *) malloc(sizeof(Node_t));
 	newHead->id=0;
-	newHead->data.hp=0;
-	newHead->data.atk=0;
-	newHead->data.def=0;
+	newHead->data.hp=date.hp;
+	newHead->data.atk=date.atk;
+	newHead->data.spAtk=date.spAtk;
+	newHead->data.def=date.def;
+	newHead->data.spDef=date.spDef;
+	newHead->data.spd=date.spd;
 	newHead->next=*head;
 	*head=newHead;
 }
-*/
 
 
 void pushEnd(Node_t *head, Stats date){

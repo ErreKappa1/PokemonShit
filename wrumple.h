@@ -9,7 +9,7 @@ typedef struct Node{
 
 void printNode(Node_t *current);
 void printList(Node_t *head);
-void pushBeg(Node_t **head);
+void pushBeg(Node_t **head, Stats date);
 void pushEnd(Node_t *head, Stats date);
 void popBeg(Node_t **head);
 void popEnd(Node_t **head);

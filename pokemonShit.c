@@ -17,6 +17,8 @@ int main(void){
 	mainMenu command=0;//switch case flag
 	char goalPkmn[40+1]={0};//pokemon that the program will find
 
+	Node_t *head=NULL
+
 	nr=loadPkmnFn(&db, "pokemon_data.txt", debug);//load the file into the db
 	if(debug){
 		printf("\nNumber of lines %d", nr);
