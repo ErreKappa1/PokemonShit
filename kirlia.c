@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include "megaGardevoir.h"
+#include "wrumple.h"
 #include "gardevoir.h"
 
 
-void globalAverageFn(Pokemon *db, int nr, int debug){
+void globalAverageFn(Pokemon *db, int nr, Node_t **head, int debug){
 
 	Stats currentAvg;//average value of pokemon in the current generation
 	int i=0;//cycle index
@@ -32,6 +33,7 @@ void globalAverageFn(Pokemon *db, int nr, int debug){
 			printf("\nNumber of pokemon prensent in the %d generation:\t%d", currentGen, numPkmnPerGen);
 			printf("\nAvg values:");
 			printPkmnStatsFn(currentAvg, debug);
+			pushEndFn(head, currentAvg);
 			printf("\n");
 			setPkmnStatsToZeroFn(&currentAvg, debug);//resetting every accumulator and counter
 			currentGen++;//updating generatuion index
@@ -39,10 +41,12 @@ void globalAverageFn(Pokemon *db, int nr, int debug){
 		}
 	}
 	printf("\nTotal analyzed Pokemon: %d", i);
+	if(debug)
+		printListFn(*head);
 }
 
 
-void subMenuWrapperStatsFn(Pokemon *db, int nr, int debug){
+void subMenuWrapperStatsFn(Pokemon *db, int nr, Node_t **head, int debug){
 
 	int stop=1;//flag to manage exit from stats menu
 	statsSubMenu command=0;//switch case flag
@@ -55,7 +59,7 @@ void subMenuWrapperStatsFn(Pokemon *db, int nr, int debug){
 		switch(command){
 			case printAvgs:
 				system(clear);
-				globalAverageFn(db, nr, debug);//compute global statistics per generation
+				globalAverageFn(db, nr, head, debug);//compute global statistics per generation
 				printf("\n");
 				system(sleep);
 				system(clear);

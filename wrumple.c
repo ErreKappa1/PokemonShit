@@ -4,7 +4,7 @@
 #include "megaGardevoir.h"
 #include "wrumple.h"
 
-void printNode(Node_t *current){
+void printNodeFn(Node_t *current){
 	
 	printf("\nID=%d\t", current->id);
 	printf("Hp=%d\t", current->data.hp);
@@ -17,18 +17,18 @@ void printNode(Node_t *current){
 }
 
 
-void printList(Node_t *head){
+void printListFn(Node_t *head){
 
 	Node_t *current=head;
 
 	while(current!=NULL){
-		printNode(current);
+		printNodeFn(current);
 		current=current->next;
 	}
 }
 
 
-void pushBeg(Node_t **head, Stats date){
+void pushBegFn(Node_t **head, Stats date){
 
 	Node_t *newHead;
 	
@@ -45,25 +45,33 @@ void pushBeg(Node_t **head, Stats date){
 }
 
 
-void pushEnd(Node_t *head, Stats date){
+void pushEndFn(Node_t **head, Stats date){
 
-	Node_t *current=head;
+	Node_t *current=*head;
+	int flag=1;
 
-	while(current->next!=NULL)
-		current=current->next;
-	current->next=(Node_t *) malloc(sizeof(Node_t));
-	current->next->id=current->id;
-	current->next->data.hp=date.hp;
-	current->next->data.atk=date.atk;
-	current->next->data.spAtk=date.spAtk;
-	current->next->data.def=date.def;
-	current->next->data.spDef=date.spDef;
-	current->next->data.spd=date.spd;
-	current->next->next=NULL;
+	if(current==NULL){
+		pushBegFn(head, date);
+		flag=0;
+	}
+
+	if(flag){
+		while(current->next!=NULL)
+			current=current->next;
+		current->next=(Node_t *) malloc(sizeof(Node_t));
+		current->next->id=current->id+1;
+		current->next->data.hp=date.hp;
+		current->next->data.atk=date.atk;
+		current->next->data.spAtk=date.spAtk;
+		current->next->data.def=date.def;
+		current->next->data.spDef=date.spDef;
+		current->next->data.spd=date.spd;
+		current->next->next=NULL;
+	}
 }
 
 
-void popBeg(Node_t **head){
+void popBegFn(Node_t **head){
 
 	Node_t *newHead=NULL;
 
@@ -73,7 +81,7 @@ void popBeg(Node_t **head){
 }
 	
 
-void popEnd(Node_t **head){
+void popEndFn(Node_t **head){
 
 	Node_t *current=*head;
 
@@ -87,13 +95,13 @@ void popEnd(Node_t **head){
 }
 
 
-void removeByID(Node_t **head, int delId){
+void removeByIDFn(Node_t **head, int delId){
 
 	Node_t *temp=NULL;
 	Node_t *current=*head;
 
 	if(current->id==delId){
-		popBeg(head);
+		popBegFn(head);
 		return;
 	}
 

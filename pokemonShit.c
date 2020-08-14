@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "megaGardevoir.h"
+#include "wrumple.h"
 #include "gardevoir.h"
 #include "kirlia.h"
 #include "ralts.h"
@@ -17,7 +18,7 @@ int main(void){
 	mainMenu command=0;//switch case flag
 	char goalPkmn[40+1]={0};//pokemon that the program will find
 
-	Node_t *head=NULL
+	Node_t *head=NULL;
 
 	nr=loadPkmnFn(&db, "pokemon_data.txt", debug);//load the file into the db
 	if(debug){
@@ -55,7 +56,7 @@ int main(void){
 				break;
 			case statistics://open the statistic submenu
 				system(clear);
-				subMenuWrapperStatsFn(db, nr, debug);//function to manage statistics subenu
+				subMenuWrapperStatsFn(db, nr, &head, debug);//function to manage statistics subenu
 				printf("\n");
 				system(clear);
 				break;

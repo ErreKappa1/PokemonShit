@@ -192,18 +192,18 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 9 - ((8 * winheight(0) + 28) / 57)
+let s:l = 59 - ((36 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-9
-normal! 04|
+59
+normal! 053|
 tabnext
 edit wrumple.c
 set splitbelow splitright
 wincmd _ | wincmd |
-split
-1wincmd k
+vsplit
+1wincmd h
 wincmd w
 set nosplitbelow
 set nosplitright
@@ -212,9 +212,7 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 28 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 118 + 119) / 238)
-exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe 'vert 1resize ' . ((&columns * 119 + 119) / 238)
 exe 'vert 2resize ' . ((&columns * 118 + 119) / 238)
 argglobal
 setlocal keymap=
@@ -341,12 +339,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 60 - ((22 * winheight(0) + 14) / 28)
+let s:l = 1 - ((0 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-60
-normal! 024|
+1
+normal! 0
 wincmd w
 argglobal
 if bufexists("wrumple.h") | buffer wrumple.h | else | edit wrumple.h | endif
@@ -474,16 +472,14 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 12 - ((11 * winheight(0) + 13) / 27)
+let s:l = 16 - ((15 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-12
-normal! 028|
+16
+normal! 017|
 wincmd w
-exe '1resize ' . ((&lines * 28 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 118 + 119) / 238)
-exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe 'vert 1resize ' . ((&columns * 119 + 119) / 238)
 exe 'vert 2resize ' . ((&columns * 118 + 119) / 238)
 tabnext
 edit megaGardevoir.c
@@ -500,9 +496,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 29 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 118 + 119) / 238)
 exe '2resize ' . ((&lines * 26 + 29) / 59)
-exe 'vert 2resize ' . ((&columns * 118 + 119) / 238)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -761,17 +755,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 13) / 26)
+let s:l = 41 - ((23 * winheight(0) + 13) / 26)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+41
 normal! 0
 wincmd w
 exe '1resize ' . ((&lines * 29 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 118 + 119) / 238)
 exe '2resize ' . ((&lines * 26 + 29) / 59)
-exe 'vert 2resize ' . ((&columns * 118 + 119) / 238)
 tabnext
 edit gardevoir.c
 set splitbelow splitright
@@ -1046,12 +1038,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((0 * winheight(0) + 13) / 26)
+let s:l = 20 - ((18 * winheight(0) + 13) / 26)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-2
-normal! 0
+20
+normal! 021|
 wincmd w
 exe '1resize ' . ((&lines * 29 + 29) / 59)
 exe '2resize ' . ((&lines * 26 + 29) / 59)
@@ -1336,12 +1328,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 22) / 44)
+let s:l = 36 - ((35 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
-normal! 018|
+36
+normal! 026|
 wincmd w
 argglobal
 if bufexists("kirlia.h") | buffer kirlia.h | else | edit kirlia.h | endif
@@ -1469,12 +1461,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 5) / 11)
+let s:l = 4 - ((3 * winheight(0) + 5) / 11)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 018|
+4
+normal! 056|
 wincmd w
 exe '1resize ' . ((&lines * 44 + 29) / 59)
 exe 'vert 1resize ' . ((&columns * 49 + 119) / 238)
@@ -1496,9 +1488,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 52 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 118 + 119) / 238)
 exe '2resize ' . ((&lines * 3 + 29) / 59)
-exe 'vert 2resize ' . ((&columns * 118 + 119) / 238)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -1765,9 +1755,7 @@ normal! zt
 normal! 0
 wincmd w
 exe '1resize ' . ((&lines * 52 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 118 + 119) / 238)
 exe '2resize ' . ((&lines * 3 + 29) / 59)
-exe 'vert 2resize ' . ((&columns * 118 + 119) / 238)
 tabnext
 edit pokemon_data.txt
 set splitbelow splitright
@@ -1782,7 +1770,7 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 75 + 119) / 238)
+exe 'vert 1resize ' . ((&columns * 195 + 119) / 238)
 exe 'vert 2resize ' . ((&columns * 42 + 119) / 238)
 argglobal
 setlocal keymap=
@@ -2049,7 +2037,7 @@ normal! zt
 10
 normal! 04|
 wincmd w
-exe 'vert 1resize ' . ((&columns * 75 + 119) / 238)
+exe 'vert 1resize ' . ((&columns * 195 + 119) / 238)
 exe 'vert 2resize ' . ((&columns * 42 + 119) / 238)
 tabnext
 edit Makefile
@@ -2192,19 +2180,19 @@ exe s:l
 normal! zt
 2
 normal! 014|
-tabnext 5
+tabnext 2
 set stal=1
 badd +1 pokemonShit.c
-badd +1 wrumple.c
+badd +62 wrumple.c
 badd +1 megaGardevoir.c
 badd +1 gardevoir.c
-badd +1 kirlia.c
 badd +1 ralts.c
 badd +1 pokemon_data.txt
 badd +1 Makefile
-badd +1 wrumple.h
+badd +12 wrumple.h
 badd +1 megaGardevoir.h
 badd +3 gardevoir.h
+badd +1 kirlia.c
 badd +1 kirlia.h
 badd +1 ralts.h
 badd +1 types.txt
@@ -2220,7 +2208,6 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
