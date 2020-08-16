@@ -32,8 +32,8 @@ void globalAverageFn(Pokemon *db, int nr, Node_t **head, int debug){
 			currentAvg=divPkmnStatsByNumFn(currentAvg, numPkmnPerGen, debug);//update the current avg before printing
 			printf("\nNumber of pokemon prensent in the %d generation:\t%d", currentGen, numPkmnPerGen);
 			printf("\nAvg values:");
-			printPkmnStatsFn(currentAvg, debug);
-			pushEndFn(head, currentAvg);
+			printPkmnStatsFn(currentAvg, debug);//print the actual avg
+			pushEndFn(head, currentAvg);//push the value to the end of the list
 			printf("\n");
 			setPkmnStatsToZeroFn(&currentAvg, debug);//resetting every accumulator and counter
 			currentGen++;//updating generatuion index

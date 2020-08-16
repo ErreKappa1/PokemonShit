@@ -33,7 +33,7 @@ void pushBegFn(Node_t **head, Stats date){
 	Node_t *newHead;
 	
 	newHead=(Node_t *) malloc(sizeof(Node_t));//newNode allocation
-	newHead->id=0;//set the id of the first node to 0, then populate the node using the second parameter
+	newHead->id=1;//set the id of the first node to 0, then populate the node using the second parameter
 	newHead->data.hp=date.hp;
 	newHead->data.atk=date.atk;
 	newHead->data.spAtk=date.spAtk;
@@ -107,7 +107,7 @@ void removeByIDFn(Node_t **head, int delId){
 
 	while(current->next!=NULL)//cycle trought the list. until the end
 		if(current->id==delId){//check if the current node id is equal to the selected one 
-			current->next=temp;
+			current->next=temp;//assing the node to a tmp var
 			break;
 		}
 
