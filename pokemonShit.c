@@ -14,6 +14,7 @@ int main(void){
 	Pokemon *db=NULL;//inizialising database
 	int nr=0;//number of rows
 	int stop=1;//flag to manage exit from main menu
+	int numOptMainMenu=5;//number of different option in main menu, error is not included
 	mainMenu command=0;//switch case flag
 	char goalPkmn[40+1]={0};//pokemon that the program will find
 
@@ -24,7 +25,7 @@ int main(void){
 	}
 	system(clear);
 	while(stop){
-		command=readCommandMain();
+		command=readCommandMain(numOptMainMenu);
 		printf("\n\n");
 		switch(command){
 			case printAll://Print the list of all available Pokemon
