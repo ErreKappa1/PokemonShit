@@ -36,6 +36,7 @@ set softtabstop=4
 set suffixes=.bak,~,.o,.info,.swp,.aux,.bbl,.blg,.brf,.cb,.dvi,.idx,.ilg,.ind,.inx,.jpg,.log,.out,.png,.toc
 set tabstop=4
 set undodir=~/.cache/vim/undo//
+set window=35
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -164,7 +165,6 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal spelloptions=
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -191,12 +191,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 48 - ((28 * winheight(0) + 15) / 31)
+let s:l = 48 - ((33 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 48
-normal! 04|
+normal! 064|
 tabnext
 edit megaGardevoir.c
 set splitbelow splitright
@@ -211,8 +211,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 15 + 16) / 33)
-exe '2resize ' . ((&lines * 14 + 16) / 33)
+exe '1resize ' . ((&lines * 18 + 19) / 38)
+exe '2resize ' . ((&lines * 16 + 19) / 38)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -312,7 +312,6 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal spelloptions=
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -339,7 +338,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 7) / 15)
+let s:l = 4 - ((3 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -446,7 +445,6 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal spelloptions=
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -473,15 +471,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((0 * winheight(0) + 7) / 14)
+let s:l = 2 - ((0 * winheight(0) + 8) / 16)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 2
 normal! 013|
 wincmd w
-exe '1resize ' . ((&lines * 15 + 16) / 33)
-exe '2resize ' . ((&lines * 14 + 16) / 33)
+exe '1resize ' . ((&lines * 18 + 19) / 38)
+exe '2resize ' . ((&lines * 16 + 19) / 38)
 tabnext
 edit gardevoir.c
 set splitbelow splitright
@@ -496,8 +494,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 15 + 16) / 33)
-exe '2resize ' . ((&lines * 14 + 16) / 33)
+exe '1resize ' . ((&lines * 18 + 19) / 38)
+exe '2resize ' . ((&lines * 16 + 19) / 38)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -597,7 +595,6 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal spelloptions=
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -624,12 +621,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 43 - ((14 * winheight(0) + 7) / 15)
+let s:l = 49 - ((8 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-43
-normal! 05|
+49
+normal! 0
 wincmd w
 argglobal
 if bufexists("gardevoir.h") | buffer gardevoir.h | else | edit gardevoir.h | endif
@@ -731,7 +728,6 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal spelloptions=
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -758,15 +754,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((0 * winheight(0) + 7) / 14)
+let s:l = 2 - ((0 * winheight(0) + 8) / 16)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 2
 normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 15 + 16) / 33)
-exe '2resize ' . ((&lines * 14 + 16) / 33)
+exe '1resize ' . ((&lines * 18 + 19) / 38)
+exe '2resize ' . ((&lines * 16 + 19) / 38)
 tabnext
 edit kirlia.c
 set splitbelow splitright
@@ -781,8 +777,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 23 + 16) / 33)
-exe '2resize ' . ((&lines * 6 + 16) / 33)
+exe '1resize ' . ((&lines * 27 + 19) / 38)
+exe '2resize ' . ((&lines * 7 + 19) / 38)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -882,7 +878,6 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal spelloptions=
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -909,11 +904,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 72 - ((17 * winheight(0) + 11) / 23)
+let s:l = 8 - ((3 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-72
+8
 normal! 018|
 wincmd w
 argglobal
@@ -1016,7 +1011,6 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal spelloptions=
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -1043,15 +1037,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 3) / 6)
+let s:l = 1 - ((0 * winheight(0) + 3) / 7)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 018|
 wincmd w
-exe '1resize ' . ((&lines * 23 + 16) / 33)
-exe '2resize ' . ((&lines * 6 + 16) / 33)
+exe '1resize ' . ((&lines * 27 + 19) / 38)
+exe '2resize ' . ((&lines * 7 + 19) / 38)
 tabnext
 edit ralts.c
 set splitbelow splitright
@@ -1066,8 +1060,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 27 + 16) / 33)
-exe '2resize ' . ((&lines * 2 + 16) / 33)
+exe '1resize ' . ((&lines * 32 + 19) / 38)
+exe '2resize ' . ((&lines * 2 + 19) / 38)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -1167,7 +1161,6 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal spelloptions=
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -1194,7 +1187,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 13) / 27)
+let s:l = 4 - ((3 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1301,7 +1294,6 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal spelloptions=
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -1335,8 +1327,8 @@ normal! zt
 6
 normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 27 + 16) / 33)
-exe '2resize ' . ((&lines * 2 + 16) / 33)
+exe '1resize ' . ((&lines * 32 + 19) / 38)
+exe '2resize ' . ((&lines * 2 + 19) / 38)
 tabnext
 edit pokemon_data.txt
 set splitbelow splitright
@@ -1351,8 +1343,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 80 + 63) / 127)
-exe 'vert 2resize ' . ((&columns * 46 + 63) / 127)
+exe 'vert 1resize ' . ((&columns * 92 + 72) / 145)
+exe 'vert 2resize ' . ((&columns * 52 + 72) / 145)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -1452,7 +1444,6 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal spelloptions=
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -1479,7 +1470,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 167 - ((14 * winheight(0) + 15) / 30)
+let s:l = 167 - ((16 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1586,7 +1577,6 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal spelloptions=
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -1613,15 +1603,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((0 * winheight(0) + 15) / 30)
+let s:l = 10 - ((0 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 10
 normal! 04|
 wincmd w
-exe 'vert 1resize ' . ((&columns * 80 + 63) / 127)
-exe 'vert 2resize ' . ((&columns * 46 + 63) / 127)
+exe 'vert 1resize ' . ((&columns * 92 + 72) / 145)
+exe 'vert 2resize ' . ((&columns * 52 + 72) / 145)
 tabnext
 edit Makefile
 set splitbelow splitright
@@ -1731,7 +1721,6 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal spelloptions=
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -1758,7 +1747,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((1 * winheight(0) + 15) / 31)
+let s:l = 2 - ((1 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1790,6 +1779,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

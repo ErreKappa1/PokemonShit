@@ -21,7 +21,7 @@ typedef struct Node{//node to store into a list the pkmn stats
 	struct Node * next;
 } NodePkmnStats;
 
-mainMenu readCommandMain(int numOpt);//prompt to the user and read the command from stdin
-statsSubMenu readCommandSub1(int numOpt);//prompt to the user and read the command from stdin
+mainMenu readCommandMain();//prompt to the user and read the command from stdin
+statsSubMenu readCommandSub1();//prompt to the user and read the command from stdin
 
 #endif
