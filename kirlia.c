@@ -64,6 +64,13 @@ void subMenuWrapperStatsFn(Pokemon *db, int nr, Node_t **head, int debug){
 				system(sleep);
 				system(clear);
 			break;
+			case topPkmnPerStatPerGen:
+				system(clear);
+
+				printf("\n");
+				system(sleep);
+				system(clear);
+			break;
 			case goToMainMenu://Exit the program
 				system(clear);
 				stop=0;

@@ -12,6 +12,7 @@ typedef enum{
 
 typedef enum{
 	printAvgs,
+	topPkmnPerStatPerGen,
 	goToMainMenu,
 	errorError
 } statsSubMenu;

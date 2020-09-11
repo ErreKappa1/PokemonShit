@@ -5,7 +5,7 @@
 #include "gardevoir.h"
 
 #define numOpt0 5
-#define numOpt1 3
+#define numOpt1 4
 
 
 mainMenu readCommandMain(){
@@ -40,10 +40,11 @@ mainMenu readCommandMain(){
 
 statsSubMenu readCommandSub1(){
 
-	//const int numOpt=2;
+	//const int numOpt=3;
 	int j=0;//index used to cycle on the options table
-	char string[12+1];//store the command submitted by the user
-	char optTable[numOpt1][12+1]={	"printAvgs",//contains every possible option that the user can submit
+	char string[20+1];//store the command submitted by the user
+	char optTable[numOpt1][20+1]={	"printAvgs",//contains every possible option that the user can submit
+									"topPkmnPerStatPerGen",
 									"goToMainMenu",};
 	statsSubMenu index;//index used to cycle on the menu
 
