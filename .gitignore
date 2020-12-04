@@ -2,3 +2,4 @@ x*
 .*.swp
 TODO.TXT
 ./Vim
+*.ignore

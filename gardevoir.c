@@ -5,7 +5,7 @@
 #include "gardevoir.h"
 
 #define numOpt0 5
-#define numOpt1 4
+#define numOpt1 3
 
 
 mainMenu readCommandMain(){
@@ -44,12 +44,13 @@ statsSubMenu readCommandSub1(){
 	int j=0;//index used to cycle on the options table
 	char string[20+1];//store the command submitted by the user
 	char optTable[numOpt1][20+1]={	"printAvgs",//contains every possible option that the user can submit
-									"topPkmnPerStatPerGen",
+									"findTopPokemon",
 									"goToMainMenu",};
 	statsSubMenu index;//index used to cycle on the menu
 
 	printf("\nInsert a command:");
 	printf("\n1)\tAverage statistics per generation");
+	printf("\n2)\tBest pokemon given a generation and a particular statistic");
 	printf("\n0)\tReturn to main menu\n--------------------------------------------------------------\n\n\n");//main menu output
 	printf("\nCommand list:");
 	for(j=0; j<numOpt1; j++)//output the command list

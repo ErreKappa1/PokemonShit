@@ -46,6 +46,25 @@ void globalAverageFn(Pokemon *db, int nr, Node_t **head, int debug){
 }
 
 
+void topPkmnPerGenByStatFn(Pokemon *db, int nr, Node_t **head, int debug){
+
+	int gen=0;//stores the required generation
+	int stat=0;//stores the required statistic
+	int err=0;//error counter for both input
+
+	//TODO
+
+	if(debug)
+		printf("Beginning of topPkmnPerGenByStatFn\n");
+	do{
+		if(error!=0)//error in text formatting
+			printf("\n\tError: Insert a supported generation\n");
+		printf("\nIn what generation are you searcing? From one to six");
+		scanf("%d", &gen);
+		err++;
+	}while(gen>6||gen<1);
+}
+
 void subMenuWrapperStatsFn(Pokemon *db, int nr, Node_t **head, int debug){
 
 	int stop=1;//flag to manage exit from stats menu
@@ -66,7 +85,7 @@ void subMenuWrapperStatsFn(Pokemon *db, int nr, Node_t **head, int debug){
 			break;
 			case topPkmnPerStatPerGen:
 				system(clear);
-
+				topPkmnPerGenByStatFn(db, nr, head, debug);//take gen and stat as impunt and return the maching pkmn
 				printf("\n");
 				system(sleep);
 				system(clear);
