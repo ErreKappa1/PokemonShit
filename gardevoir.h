@@ -6,13 +6,13 @@ typedef enum{
 	selectPkmn,
 	printPkmn,
 	statistics,
-	exitTheProgram,
+	exitPrg,
 	error
 } mainMenu;
 
 typedef enum{
 	printAvgs,
-	topPkmnPerStatPerGen,
+	findTopPokemon,
 	goToMainMenu,
 	errorError
 } statsSubMenu;

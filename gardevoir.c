@@ -17,7 +17,7 @@ mainMenu readCommandMain(){
 									"selectPkmn",
 									"printPkmn",
 									"statistics",
-									"exitTheProgram",};
+									"exitPrg",};
 	mainMenu index;//index used to cycle on the menu
 
 	printf("\nInsert a command:");

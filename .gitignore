@@ -1,5 +1,5 @@
 x*
 .*.swp
-TODO.TXT
 ./Vim
 *.ignore
+*.o
