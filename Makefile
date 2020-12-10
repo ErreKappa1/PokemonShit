@@ -4,7 +4,7 @@ DEPS='wrumple.h' 'ralts.h' 'kirlia.h 'gardevoir.h 'megaGardevoir.h'
 OBJ=wrumple.o ralts.o kirlia.o gardevoir.o megaGardevoir.o pokemonShit.o
 
 %.o: %.c $(DEPS)
-	$(CC) -c -o $@ $(DEPS) $(CFLAGS)
+	$(CC) -c -o $@ $^ $(CFLAGS)
 
 xPokemonShit: $(OBJ)
 	$(CC) -o $@ $^ $(CTAGS)

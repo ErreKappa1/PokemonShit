@@ -13,7 +13,12 @@ void printPkmnFn(Pokemon var, int debug){
 
 	if(debug)
 		printf("\nBeginning printPkmnFn");
-	printf("\n|%d\t|%s\t|%s\t|%s\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%s\t|\tStill Elegible: %d|", var.id, var.name, var.type1, var.type2, var.stats.hp, var.stats.atk, var.stats.def, var.stats.spAtk, var.stats.spDef, var.stats.spd, var.gen, var.legg, var.read);
+	printf( "\n|%d\t|%s\t|%s\t|%s"//id, name, types
+			"\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d"//stats
+			"\t|%d\t|%s\t|\tStill Elegible: %d|",//gen, legg, read 
+			var.id, var.name, var.type1, var.type2, 
+			var.stats.hp, var.stats.atk, var.stats.def, var.stats.spAtk, var.stats.spDef, var.stats.spd, 
+			var.gen, var.legg, var.read);
 }
 
 void setPkmnToZeroFn(Pokemon *var, int debug){

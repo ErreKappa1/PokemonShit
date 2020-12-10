@@ -76,13 +76,40 @@ int loadPkmnFn(Pokemon **db, char fileName[], int debug){
 		if(tempPostConv){//return 0 if the conversion is not possible
 			strcpy((*db)[index1].type2, "Null");
 			(*db)[index1].stats.hp=tempPostConv;
-			fscanf(fp1, "%d\t%d\t%d\t%d\t%d\t%d\t%s", &(*db)[index1].stats.atk, &(*db)[index1].stats.def, &(*db)[index1].stats.spAtk, &(*db)[index1].stats.spDef, &(*db)[index1].stats.spd, &(*db)[index1].gen, (*db)[index1].legg);//scan the last part of the row
+			fscanf(fp1, "%d\t%d\t%d\t%d\t%d\t%d\t%s",
+					&(*db)[index1].stats.atk,
+					&(*db)[index1].stats.def,
+					&(*db)[index1].stats.spAtk,
+					&(*db)[index1].stats.spDef,
+					&(*db)[index1].stats.spd,
+					&(*db)[index1].gen,
+					(*db)[index1].legg);//scan the last part of the row
 		}else{//string
 			strcpy((*db)[index1].type2, temp);
-			fscanf(fp1, "%d\t%d\t%d\t%d\t%d\t%d\t%d\t%s", &(*db)[index1].stats.hp, &(*db)[index1].stats.atk, &(*db)[index1].stats.def, &(*db)[index1].stats.spAtk, &(*db)[index1].stats.spDef, &(*db)[index1].stats.spd, &(*db)[index1].gen, (*db)[index1].legg);//scan the last part of the row
+			fscanf(fp1, "%d\t%d\t%d\t%d\t%d\t%d\t%d\t%s",
+					&(*db)[index1].stats.hp,
+					&(*db)[index1].stats.atk,
+					&(*db)[index1].stats.def,
+					&(*db)[index1].stats.spAtk,
+					&(*db)[index1].stats.spDef,
+					&(*db)[index1].stats.spd,
+					&(*db)[index1].gen,
+					(*db)[index1].legg);//scan the last part of the row
 		}
 		if(debug)
-			printf("\n|%d\t|%s\t|%s\t|%s\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%s\t|", (*db)[index1].id, (*db)[index1].name, (*db)[index1].type1, (*db)[index1].type2, (*db)[index1].stats.hp, (*db)[index1].stats.atk, (*db)[index1].stats.def, (*db)[index1].stats.spAtk, (*db)[index1].stats.spDef, (*db)[index1].stats.spd, (*db)[index1].gen, (*db)[index1].legg);
+			printf("\n|%d\t|%s\t|%s\t|%s\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%s\t|",
+					(*db)[index1].id,
+					(*db)[index1].name,
+					(*db)[index1].type1,
+					(*db)[index1].type2,
+					(*db)[index1].stats.hp,
+					(*db)[index1].stats.atk,
+					(*db)[index1].stats.def,
+					(*db)[index1].stats.spAtk,
+					(*db)[index1].stats.spDef,
+					(*db)[index1].stats.spd,
+					(*db)[index1].gen,
+					(*db)[index1].legg);
 	}
 	if(debug)
 		printf("\nPopulation done, %d rows completed", index1);

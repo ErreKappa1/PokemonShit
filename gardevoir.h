@@ -5,15 +5,15 @@ typedef enum{
 	printAll,
 	selectPkmn,
 	printPkmn,
-	statistics,
+	stats,
 	exitPrg,
 	error
 } mainMenu;
 
 typedef enum{
 	printAvgs,
-	findTopPokemon,
-	goToMainMenu,
+	findPkmn,
+	back,
 	errorError
 } statsSubMenu;
 

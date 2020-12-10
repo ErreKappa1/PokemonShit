@@ -49,20 +49,50 @@ void globalAverageFn(Pokemon *db, int nr, Node_t **head, int debug){
 void topPkmnPerGenByStatFn(Pokemon *db, int nr, Node_t **head, int debug){
 
 	int gen=0;//stores the required generation
-	int stat=0;//stores the required statistic
-	int err=0;//error counter for both input
-
+	char stat[5+1];//stores the required statistic
+	char statList[6][5+1]={ "hp",//statistics list
+							"atk",
+							"def",
+							"spAtk",
+							"spDef",
+							"spd"};
+	int i=0;//cycle index
+	int fineGen=0, fineStat=0;//checking flag
+	
 	//TODO
 
 	if(debug)
 		printf("Beginning of topPkmnPerGenByStatFn\n");
 	do{
-		if(error!=0)//error in text formatting
-			printf("\n\tError: Insert a supported generation\n");
-		printf("\nIn what generation are you searcing? From one to six");
-		scanf("%d", &gen);
-		err++;
-	}while(gen>6||gen<1);
+		printf("\nIn what generation are you searcing? From one to six:\t");
+		scanf("%d", &gen);//require generation from user
+		if(gen<6&&gen>1)//check the user input
+			fineGen=1;
+		if(debug)
+			printf("\n\ngen input is fine: %d\n\n", fineGen);
+		printf( "\nIn what statistic are you interested in? Choose one between:\n");
+		for(i=0; i<6; i++)//print the statistics list
+			printf("%s\n", statList[i]);
+		printf("\n");
+		scanf("%s", stat);//require stat from user
+		for(i=0; i<6; i++)//check the user input
+			if(strcmp(statList[i], stat)==0){
+				fineStat=1;
+				break;
+			}else{
+				fineStat=0;
+			}
+		if(debug)
+			printf("\n\nstat input is fine: %d\n\n", fineStat);
+		if(fineStat&&fineGen){//exit from the main cicle
+			break;
+		}else{//print the error if necessary
+			printf("\n\nERROR: Must insert a gneration between 1 and 6, and a satistic between the listed ones");
+			system(sleep);
+			system(clear);
+		}
+	}while(1);
+	for(i=0; i<nr; i++)//cycle on the whole db
 }
 
 void subMenuWrapperStatsFn(Pokemon *db, int nr, Node_t **head, int debug){
@@ -83,7 +113,7 @@ void subMenuWrapperStatsFn(Pokemon *db, int nr, Node_t **head, int debug){
 				system(sleep);
 				system(clear);
 			break;
-			case topPkmnPerStatPerGen:
+			case findTopPokemon:
 				system(clear);
 				topPkmnPerGenByStatFn(db, nr, head, debug);//take gen and stat as impunt and return the maching pkmn
 				printf("\n");

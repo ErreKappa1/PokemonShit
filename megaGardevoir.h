@@ -37,6 +37,8 @@ void setPkmnStatsToZeroFn(Stats *var, int debug);//set to zero a generic Pokemon
 Stats addPkmnStatsFn(Stats first, Stats second, int debug);//add the stats of the first Pokemon to the second one
 Stats divPkmnStatsByNumFn(Stats first, int second, int debug);//divide the given Stats var by the given Int
 
+//function set from findPkmn opt in stats subMenu
+
 void printDbFn(Pokemon *db, int nr, int debug);//read db and print everything to stdout
 void printPkmnNameFn(Pokemon *db, int nr, int debug, char goalPkmn[]);//print a single line of the db based on the lastt parameter
 

@@ -16,7 +16,7 @@ mainMenu readCommandMain(){
 	char optTable[numOpt0][14+1]={	"printAll",//contains every possible option that the user can submit
 									"selectPkmn",
 									"printPkmn",
-									"statistics",
+									"stats",
 									"exitPrg",};
 	mainMenu index;//index used to cycle on the menu
 
@@ -44,8 +44,8 @@ statsSubMenu readCommandSub1(){
 	int j=0;//index used to cycle on the options table
 	char string[20+1];//store the command submitted by the user
 	char optTable[numOpt1][20+1]={	"printAvgs",//contains every possible option that the user can submit
-									"findTopPokemon",
-									"goToMainMenu",};
+									"findPkmn",
+									"back",};
 	statsSubMenu index;//index used to cycle on the menu
 
 	printf("\nInsert a command:");
