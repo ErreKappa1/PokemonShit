@@ -4,9 +4,11 @@ let s:cpo_save=&cpo
 set cpo&vim
 imap <F7> :cnexta
 imap <F6> :cpreviousa
+nnoremap  r :redraw!
 nnoremap  s :s/
 nnoremap  l :bnext
 nnoremap  h :bprev
+xnoremap <silent> P p:call setreg('"', getreg('0'), getregtype('0'))
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
 nmap z<Up> zOj
@@ -28,8 +30,8 @@ map <F3> [I:let nr = input("Which one: ")|exe "normal " . nr ."[\t"
 map <F1> :wa :!clear  :make
 nnoremap <Right> :bnext
 nnoremap <Left> :bprev
-abbr #d #define
 abbr #i #include
+abbr #d #define
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -60,6 +62,7 @@ set softtabstop=4
 set statusline=%#Visual#%{StatuslineGit()}%#StatusLine#\ %<%f\ %y%m%r%=%#MatchParen#\ %n\ %#StatusLineTermNC#%-12.(%l,%c%V%)\ %P
 set suffixes=.bak,~,.o,.info,.swp,.aux,.bbl,.blg,.brf,.cb,.dvi,.idx,.ilg,.ind,.inx,.jpg,.log,.out,.png,.toc
 set tabstop=4
+set textwidth=120
 set undodir=~/.cache/vim/undo//
 let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
 let v:this_session=expand("<sfile>:p")
@@ -790,12 +793,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 8 - ((7 * winheight(0) + 13) / 27)
+let s:l = 2 - ((0 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-8
-normal! 0
+2
+normal! 05|
 wincmd w
 exe '1resize ' . ((&lines * 28 + 29) / 59)
 exe '2resize ' . ((&lines * 27 + 29) / 59)
@@ -942,12 +945,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 47 - ((11 * winheight(0) + 14) / 28)
+let s:l = 64 - ((27 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-47
-normal! 038|
+64
+normal! 0
 wincmd w
 argglobal
 if bufexists("gardevoir.h") | buffer gardevoir.h | else | edit gardevoir.h | endif
@@ -1371,12 +1374,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 95 - ((37 * winheight(0) + 23) / 46)
+let s:l = 103 - ((11 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-95
-normal! 010|
+103
+normal! 096|
 wincmd w
 argglobal
 if bufexists("kirlia.h") | buffer kirlia.h | else | edit kirlia.h | endif
@@ -1662,11 +1665,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 73 - ((27 * winheight(0) + 24) / 49)
+let s:l = 50 - ((21 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-73
+50
 normal! 0
 wincmd w
 argglobal
@@ -2700,7 +2703,7 @@ badd +4 wrumple.h
 badd +10 megaGardevoir.h
 badd +13 gardevoir.h
 badd +1 term
-badd +89 kirlia.c
+badd +0 kirlia.c
 badd +1 kirlia.h
 badd +5 ralts.h
 badd +18 types.txt

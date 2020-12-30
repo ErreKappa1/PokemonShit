@@ -4,6 +4,7 @@
 #include "megaGardevoir.h"
 #include "wrumple.h"
 #include "gardevoir.h"
+#include "kirlia.h"
 
 
 void globalAverageFn(Pokemon *db, int nr, Node_t **head, int debug){
@@ -69,7 +70,7 @@ void topPkmnPerGenByStatFn(Pokemon *db, int nr, Node_t **head, int debug){
 		if(gen<6&&gen>1)//check the user input
 			fineGen=1;
 		if(debug)
-			printf("\n\ngen input is fine: %d\n\n", fineGen);
+			printf("\n\ngen input is fine: %d\n\n", gen);
 		printf( "\nIn what statistic are you interested in? Choose one between:\n");
 		for(i=0; i<6; i++)//print the statistics list
 			printf("%s\n", statList[i]);
@@ -83,7 +84,7 @@ void topPkmnPerGenByStatFn(Pokemon *db, int nr, Node_t **head, int debug){
 				fineStat=0;
 			}
 		if(debug)
-			printf("\n\nstat input is fine: %d\n\n", fineStat);
+			printf("\n\nstat input is fine: %d\n\n", stat);
 		if(fineStat&&fineGen){//exit from the main cicle
 			break;
 		}else{//print the error if necessary
@@ -92,8 +93,24 @@ void topPkmnPerGenByStatFn(Pokemon *db, int nr, Node_t **head, int debug){
 			system(clear);
 		}
 	}while(1);
+	if(debug)
+		printf("\nInput:\n\tGen:\t%d\n\tStat:\t%s", gen, stat);
 	for(i=0; i<nr; i++)//cycle on the whole db
+		for(int j=0; j<6; j++)
+			if(db[i].gen==gen)
+				if(debug)
+					printf("\nAnalyzing the %d generation", db[i].gen);
+	//TODO work on the stat, dunno how to compare tha string and the actual member of the struct
 }
+
+/*
+	char statList[6][5+1]={ "hp",//statistics list
+							"atk",
+							"def",
+							"spAtk",
+							"spDef",
+							"spd"};
+*/
 
 void subMenuWrapperStatsFn(Pokemon *db, int nr, Node_t **head, int debug){
 
@@ -113,14 +130,14 @@ void subMenuWrapperStatsFn(Pokemon *db, int nr, Node_t **head, int debug){
 				system(sleep);
 				system(clear);
 			break;
-			case findTopPokemon:
+			case findPkmn:
 				system(clear);
 				topPkmnPerGenByStatFn(db, nr, head, debug);//take gen and stat as impunt and return the maching pkmn
 				printf("\n");
 				system(sleep);
 				system(clear);
 			break;
-			case goToMainMenu://Exit the program
+			case back://Exit the program
 				system(clear);
 				stop=0;
 			break;
