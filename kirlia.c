@@ -58,9 +58,12 @@ void topPkmnPerGenByStatFn(Pokemon *db, int nr, Node_t **head, int debug){
 							"spDef",
 							"spd"};
 	int i=0;//cycle index
+	int j=0;
 	int fineGen=0, fineStat=0;//checking flag
-	
-	//TODO
+	int maxStat=0;
+	int maxPkmnIndex=0;
+
+	//TODO add a "mark as favorite" section, with some actions
 
 	if(debug)
 		printf("Beginning of topPkmnPerGenByStatFn\n");
@@ -95,21 +98,78 @@ void topPkmnPerGenByStatFn(Pokemon *db, int nr, Node_t **head, int debug){
 	}while(1);
 	if(debug)
 		printf("\nInput:\n\tGen:\t%d\n\tStat:\t%s", gen, stat);
-	for(i=0; i<nr; i++)//cycle on the whole db
-		for(int j=0; j<6; j++)
-			if(db[i].gen==gen)
+	for(i=0; i<nr; i++){//cycle on the whole db
+		if(db[i].gen==gen){//match gen
+			if(strcmp(stat, statList[0])==0){//mach stat, hp
+				if(maxStat<db[i].stats.hp){//create a function for those equals parts
+					maxStat=db[i].stats.hp;
+					maxPkmnIndex=i;
+				}
+			}else if(strcmp(stat, statList[1])==0){//mach stat, atk
+				if(maxStat<db[i].stats.atk){//create a function for those equals parts
+					maxStat=db[i].stats.atk;
+					maxPkmnIndex=i;
+				}
+			}else if(strcmp(stat, statList[2])==0){//mach stat, def
+				if(maxStat<db[i].stats.def){//create a function for those equals parts
+					maxStat=db[i].stats.def;
+					maxPkmnIndex=i;
+				}
+			}else if(strcmp(stat, statList[3])==0){//mach stat, spAtk
+				if(maxStat<db[i].stats.spAtk){//create a function for those equals parts
+					maxStat=db[i].stats.spAtk;
+					maxPkmnIndex=i;
+				}
+			}else if(strcmp(stat, statList[4])==0){//mach stat, spDef
+				if(maxStat<db[i].stats.spDef){//create a function for those equals parts
+					maxStat=db[i].stats.spDef;
+					maxPkmnIndex=i;
+				}
+			}else if(strcmp(stat, statList[5])==0){//mach stat, spd
+				if(maxStat<db[i].stats.spd){//create a function for those equals parts
+					maxStat=db[i].stats.spd;
+					maxPkmnIndex=i;
+				}
+			}else{
 				if(debug)
-					printf("\nAnalyzing the %d generation", db[i].gen);
-	//TODO work on the stat, dunno how to compare tha string and the actual member of the struct
+					printf("Excuse me, wtf?\n");
+			}
+		}
+	}
+	if(debug){
+		printf("\nBest pokemon considering %d gen and %s stat:\n", gen, stat); 
+		printPkmnFn(db[maxPkmnIndex], debug);
+		printf("\nIt also should have %d as %s\n", maxStat, stat);
+	}
 }
 
 /*
-	char statList[6][5+1]={ "hp",//statistics list
-							"atk",
-							"def",
-							"spAtk",
-							"spDef",
-							"spd"};
+char statList[6][5+1]={ "hp",//statistics list
+						"atk",
+						"def",
+						"spAtk",
+						"spDef",
+						"spd"};
+
+typedef struct{
+	int hp;
+	int atk;
+	int def;
+	int spAtk;
+	int spDef;
+	int spd;
+} Stats;
+
+typedef struct{
+	int id;
+	char name[30+1];
+	char type1[8+1];
+	char type2[8+1];
+	Stats stats;
+	int gen;
+	char legg[5+1];
+	int read;
+} Pokemon;
 */
 
 void subMenuWrapperStatsFn(Pokemon *db, int nr, Node_t **head, int debug){

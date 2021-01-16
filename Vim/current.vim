@@ -59,11 +59,12 @@ set showcmd
 set smartcase
 set smartindent
 set softtabstop=4
-set statusline=%#Visual#%{StatuslineGit()}%#StatusLine#\ %<%f\ %y%m%r%=%#MatchParen#\ %n\ %#StatusLineTermNC#%-12.(%l,%c%V%)\ %P
+set statusline=%#Visual#\ %{StatuslineGit()}%#StatusLine#\ %<%f\ %y%m%r%=%#MatchParen#\ %n\ %#StatusLineTermNC#%-12.(%l,%c%V%)\ %P
 set suffixes=.bak,~,.o,.info,.swp,.aux,.bbl,.blg,.brf,.cb,.dvi,.idx,.ilg,.ind,.inx,.jpg,.log,.out,.png,.toc
 set tabstop=4
 set textwidth=120
 set undodir=~/.cache/vim/undo//
+set window=52
 let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -77,7 +78,6 @@ argglobal
 %argdel
 $argadd pokemonShit.c
 set stal=2
-tabnew
 tabnew
 tabnew
 tabnew
@@ -222,11 +222,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 79 - ((49 * winheight(0) + 28) / 56)
+let s:l = 79 - ((44 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-79
+keepjumps 79
 normal! 0
 tabnext
 edit wrumple.c
@@ -242,8 +242,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 37 + 29) / 59)
-exe '2resize ' . ((&lines * 18 + 29) / 59)
+exe '1resize ' . ((&lines * 33 + 26) / 53)
+exe '2resize ' . ((&lines * 16 + 26) / 53)
 argglobal
 balt wrumple.h
 setlocal keymap=
@@ -371,11 +371,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 18) / 37)
+let s:l = 1 - ((0 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-1
+keepjumps 1
 normal! 0
 wincmd w
 argglobal
@@ -506,15 +506,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 9) / 18)
+let s:l = 4 - ((3 * winheight(0) + 8) / 16)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-4
+keepjumps 4
 normal! 011|
 wincmd w
-exe '1resize ' . ((&lines * 37 + 29) / 59)
-exe '2resize ' . ((&lines * 18 + 29) / 59)
+exe '1resize ' . ((&lines * 33 + 26) / 53)
+exe '2resize ' . ((&lines * 16 + 26) / 53)
 tabnext
 edit megaGardevoir.c
 set splitbelow splitright
@@ -529,8 +529,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 28 + 29) / 59)
-exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe '1resize ' . ((&lines * 25 + 26) / 53)
+exe '2resize ' . ((&lines * 24 + 26) / 53)
 argglobal
 balt megaGardevoir.h
 setlocal keymap=
@@ -658,11 +658,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 16 - ((15 * winheight(0) + 14) / 28)
+let s:l = 16 - ((13 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-16
+keepjumps 16
 normal! 012|
 wincmd w
 argglobal
@@ -793,15 +793,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((0 * winheight(0) + 13) / 27)
+let s:l = 45 - ((23 * winheight(0) + 12) / 24)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-2
-normal! 05|
+keepjumps 45
+normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 28 + 29) / 59)
-exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe '1resize ' . ((&lines * 25 + 26) / 53)
+exe '2resize ' . ((&lines * 24 + 26) / 53)
 tabnext
 edit gardevoir.c
 set splitbelow splitright
@@ -816,8 +816,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 28 + 29) / 59)
-exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe '1resize ' . ((&lines * 25 + 26) / 53)
+exe '2resize ' . ((&lines * 24 + 26) / 53)
 argglobal
 balt gardevoir.h
 setlocal keymap=
@@ -945,11 +945,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 64 - ((27 * winheight(0) + 14) / 28)
+let s:l = 64 - ((24 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-64
+keepjumps 64
 normal! 0
 wincmd w
 argglobal
@@ -1080,15 +1080,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 13 - ((12 * winheight(0) + 13) / 27)
+let s:l = 13 - ((11 * winheight(0) + 12) / 24)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-13
+keepjumps 13
 normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 28 + 29) / 59)
-exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe '1resize ' . ((&lines * 25 + 26) / 53)
+exe '2resize ' . ((&lines * 24 + 26) / 53)
 tabnext
 edit wrumple.h
 set splitbelow splitright
@@ -1107,11 +1107,11 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 46 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 113 + 119) / 238)
-exe '2resize ' . ((&lines * 46 + 29) / 59)
-exe 'vert 2resize ' . ((&columns * 124 + 119) / 238)
-exe '3resize ' . ((&lines * 9 + 29) / 59)
+exe '1resize ' . ((&lines * 41 + 26) / 53)
+exe 'vert 1resize ' . ((&columns * 100 + 105) / 210)
+exe '2resize ' . ((&lines * 41 + 26) / 53)
+exe 'vert 2resize ' . ((&columns * 109 + 105) / 210)
+exe '3resize ' . ((&lines * 8 + 26) / 53)
 argglobal
 balt term
 setlocal keymap=
@@ -1239,11 +1239,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 16 - ((15 * winheight(0) + 23) / 46)
+let s:l = 16 - ((0 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-16
+keepjumps 16
 normal! 073|
 wincmd w
 argglobal
@@ -1374,12 +1374,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 103 - ((11 * winheight(0) + 23) / 46)
+let s:l = 71 - ((39 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-103
-normal! 096|
+keepjumps 71
+normal! 09|
 wincmd w
 argglobal
 if bufexists("kirlia.h") | buffer kirlia.h | else | edit kirlia.h | endif
@@ -1509,19 +1509,19 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 4) / 9)
+let s:l = 5 - ((3 * winheight(0) + 4) / 8)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-1
+keepjumps 5
 normal! 0
 wincmd w
 2wincmd w
-exe '1resize ' . ((&lines * 46 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 113 + 119) / 238)
-exe '2resize ' . ((&lines * 46 + 29) / 59)
-exe 'vert 2resize ' . ((&columns * 124 + 119) / 238)
-exe '3resize ' . ((&lines * 9 + 29) / 59)
+exe '1resize ' . ((&lines * 41 + 26) / 53)
+exe 'vert 1resize ' . ((&columns * 100 + 105) / 210)
+exe '2resize ' . ((&lines * 41 + 26) / 53)
+exe 'vert 2resize ' . ((&columns * 109 + 105) / 210)
+exe '3resize ' . ((&lines * 8 + 26) / 53)
 tabnext
 edit ralts.c
 set splitbelow splitright
@@ -1536,8 +1536,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 49 + 29) / 59)
-exe '2resize ' . ((&lines * 6 + 29) / 59)
+exe '1resize ' . ((&lines * 44 + 26) / 53)
+exe '2resize ' . ((&lines * 5 + 26) / 53)
 argglobal
 balt ralts.h
 setlocal keymap=
@@ -1665,11 +1665,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 50 - ((21 * winheight(0) + 24) / 49)
+let s:l = 50 - ((19 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-50
+keepjumps 50
 normal! 0
 wincmd w
 argglobal
@@ -1800,15 +1800,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 5 - ((4 * winheight(0) + 3) / 6)
+let s:l = 5 - ((3 * winheight(0) + 2) / 5)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-5
+keepjumps 5
 normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 49 + 29) / 59)
-exe '2resize ' . ((&lines * 6 + 29) / 59)
+exe '1resize ' . ((&lines * 44 + 26) / 53)
+exe '2resize ' . ((&lines * 5 + 26) / 53)
 tabnext
 edit pokemon_data_2.txt
 set splitbelow splitright
@@ -1827,11 +1827,11 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 28 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 89 + 119) / 238)
-exe '2resize ' . ((&lines * 27 + 29) / 59)
-exe 'vert 2resize ' . ((&columns * 89 + 119) / 238)
-exe 'vert 3resize ' . ((&columns * 148 + 119) / 238)
+exe '1resize ' . ((&lines * 25 + 26) / 53)
+exe 'vert 1resize ' . ((&columns * 78 + 105) / 210)
+exe '2resize ' . ((&lines * 24 + 26) / 53)
+exe 'vert 2resize ' . ((&columns * 78 + 105) / 210)
+exe 'vert 3resize ' . ((&columns * 131 + 105) / 210)
 argglobal
 balt types.txt
 setlocal keymap=
@@ -1960,11 +1960,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 14) / 28)
+let s:l = 1 - ((0 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-1
+keepjumps 1
 normal! 02|
 wincmd w
 argglobal
@@ -2096,11 +2096,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 18 - ((17 * winheight(0) + 13) / 27)
+let s:l = 18 - ((15 * winheight(0) + 12) / 24)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-18
+keepjumps 18
 normal! 05|
 wincmd w
 argglobal
@@ -2232,18 +2232,18 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 801 - ((55 * winheight(0) + 28) / 56)
+let s:l = 801 - ((49 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-801
+keepjumps 801
 normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 28 + 29) / 59)
-exe 'vert 1resize ' . ((&columns * 89 + 119) / 238)
-exe '2resize ' . ((&lines * 27 + 29) / 59)
-exe 'vert 2resize ' . ((&columns * 89 + 119) / 238)
-exe 'vert 3resize ' . ((&columns * 148 + 119) / 238)
+exe '1resize ' . ((&lines * 25 + 26) / 53)
+exe 'vert 1resize ' . ((&columns * 78 + 105) / 210)
+exe '2resize ' . ((&lines * 24 + 26) / 53)
+exe 'vert 2resize ' . ((&columns * 78 + 105) / 210)
+exe 'vert 3resize ' . ((&columns * 131 + 105) / 210)
 tabnext
 edit TODO.ignore
 set splitbelow splitright
@@ -2258,8 +2258,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 19 + 29) / 59)
-exe '2resize ' . ((&lines * 36 + 29) / 59)
+exe '1resize ' . ((&lines * 17 + 26) / 53)
+exe '2resize ' . ((&lines * 32 + 26) / 53)
 argglobal
 balt Makefile
 setlocal keymap=
@@ -2388,11 +2388,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 9) / 19)
+let s:l = 1 - ((0 * winheight(0) + 8) / 17)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-1
+keepjumps 1
 normal! 0
 wincmd w
 argglobal
@@ -2524,182 +2524,25 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 6 - ((0 * winheight(0) + 18) / 36)
+let s:l = 6 - ((0 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
-exe s:l
+keepjumps exe s:l
 normal! zt
-6
+keepjumps 6
 normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 19 + 29) / 59)
-exe '2resize ' . ((&lines * 36 + 29) / 59)
-tabnext
-edit ~/.vim/vimrc
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-argglobal
-balt Makefile
-vnoremap <buffer> <silent> [" :exe "normal! gv"|call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
-nnoremap <buffer> <silent> [" :call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
-vnoremap <buffer> <silent> [] m':exe "normal! gv"|call search('^\s*end\(f\%[unction]\|def\)\>', "bW")
-nnoremap <buffer> <silent> [] m':call search('^\s*end\(f\%[unction]\|def\)\>', "bW")
-vnoremap <buffer> <silent> [[ m':exe "normal! gv"|call search('^\s*\(fu\%[nction]\|def\)\>', "bW")
-nnoremap <buffer> <silent> [[ m':call search('^\s*\(fu\%[nction]\|def\)\>', "bW")
-vnoremap <buffer> <silent> ]" :exe "normal! gv"|call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
-nnoremap <buffer> <silent> ]" :call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
-vnoremap <buffer> <silent> ][ m':exe "normal! gv"|call search('^\s*end\(f\%[unction]\|def\)\>', "W")
-nnoremap <buffer> <silent> ][ m':call search('^\s*end\(f\%[unction]\|def\)\>', "W")
-vnoremap <buffer> <silent> ]] m':exe "normal! gv"|call search('^\s*\(fu\%[nction]\|def\)\>', "W")
-nnoremap <buffer> <silent> ]] m':call search('^\s*\(fu\%[nction]\|def\)\>', "W")
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal cindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-set colorcolumn=120
-setlocal colorcolumn=120
-setlocal comments=sO:\"\ -,mO:\"\ \ ,sO:#\ -,mO:#\ \ ,eO:##,:\",b:#
-setlocal commentstring=\"%s
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal cursorlineopt=both
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != 'vim'
-setlocal filetype=vim
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=croql
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=GetVimIndent()
-setlocal indentkeys=0{,0},0),0],:,!^F,o,O,e,=end,=},=else,=cat,=finall,=END,0\\,0=\"\\\ 
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,#
-setlocal keywordprg=:help
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-set list
-setlocal list
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=-1
-setlocal shiftwidth=4
-setlocal noshortname
-setlocal showbreak=
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal smartindent
-setlocal softtabstop=4
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal spelloptions=
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'vim'
-setlocal syntax=vim
-endif
-setlocal tabstop=4
-setlocal tagcase=
-setlocal tagfunc=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=78
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal wincolor=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 28) / 56)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
+exe '1resize ' . ((&lines * 17 + 26) / 53)
+exe '2resize ' . ((&lines * 32 + 26) / 53)
 tabnext 5
 set stal=1
 badd +1 pokemonShit.c
 badd +1 wrumple.c
 badd +1 megaGardevoir.c
-badd +19 gardevoir.c
+badd +1 gardevoir.c
 badd +73 ralts.c
 badd +1 pokemon_data_2.txt
 badd +1 TODO.ignore
-badd +1 ~/.vim/vimrc
-badd +4 wrumple.h
+badd +1 wrumple.h
 badd +10 megaGardevoir.h
 badd +13 gardevoir.h
 badd +1 term
@@ -2709,6 +2552,7 @@ badd +5 ralts.h
 badd +18 types.txt
 badd +801 pokemon_data.txt
 badd +10 Makefile
+badd +1 ~/.vim/vimrc
 badd +1 .gitignore
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
