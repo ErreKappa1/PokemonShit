@@ -92,7 +92,7 @@ void topPkmnPerGenByStatFn(Pokemon *db, int nr, Node_t **head, int debug){
 			break;
 		}else{//print the error if necessary
 			printf("\n\nERROR: Must insert a gneration between 1 and 6, and a satistic between the listed ones");
-			stat="\0";
+			stat=;
 			system(sleep);
 			system(clear);
 		}
