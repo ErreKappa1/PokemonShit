@@ -64,7 +64,6 @@ set suffixes=.bak,~,.o,.info,.swp,.aux,.bbl,.blg,.brf,.cb,.dvi,.idx,.ilg,.ind,.i
 set tabstop=4
 set textwidth=120
 set undodir=~/.cache/vim/undo//
-set window=52
 let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -222,12 +221,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 79 - ((44 * winheight(0) + 25) / 50)
+let s:l = 64 - ((29 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 79
-normal! 0
+keepjumps 64
+normal! 017|
 tabnext
 edit wrumple.c
 set splitbelow splitright
@@ -506,12 +505,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 8) / 16)
+let s:l = 18 - ((15 * winheight(0) + 8) / 16)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 4
-normal! 011|
+keepjumps 18
+normal! 06|
 wincmd w
 exe '1resize ' . ((&lines * 33 + 26) / 53)
 exe '2resize ' . ((&lines * 16 + 26) / 53)
@@ -793,11 +792,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 45 - ((23 * winheight(0) + 12) / 24)
+let s:l = 1 - ((0 * winheight(0) + 12) / 24)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 45
+keepjumps 1
 normal! 0
 wincmd w
 exe '1resize ' . ((&lines * 25 + 26) / 53)
@@ -1080,11 +1079,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 13 - ((11 * winheight(0) + 12) / 24)
+let s:l = 5 - ((3 * winheight(0) + 12) / 24)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 13
+keepjumps 5
 normal! 0
 wincmd w
 exe '1resize ' . ((&lines * 25 + 26) / 53)
@@ -1108,9 +1107,9 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 41 + 26) / 53)
-exe 'vert 1resize ' . ((&columns * 100 + 105) / 210)
+exe 'vert 1resize ' . ((&columns * 100 + 105) / 211)
 exe '2resize ' . ((&lines * 41 + 26) / 53)
-exe 'vert 2resize ' . ((&columns * 109 + 105) / 210)
+exe 'vert 2resize ' . ((&columns * 110 + 105) / 211)
 exe '3resize ' . ((&lines * 8 + 26) / 53)
 argglobal
 balt term
@@ -1374,12 +1373,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 71 - ((39 * winheight(0) + 20) / 41)
+let s:l = 95 - ((2 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 71
-normal! 09|
+keepjumps 95
+normal! 017|
 wincmd w
 argglobal
 if bufexists("kirlia.h") | buffer kirlia.h | else | edit kirlia.h | endif
@@ -1518,9 +1517,9 @@ normal! 0
 wincmd w
 2wincmd w
 exe '1resize ' . ((&lines * 41 + 26) / 53)
-exe 'vert 1resize ' . ((&columns * 100 + 105) / 210)
+exe 'vert 1resize ' . ((&columns * 100 + 105) / 211)
 exe '2resize ' . ((&lines * 41 + 26) / 53)
-exe 'vert 2resize ' . ((&columns * 109 + 105) / 210)
+exe 'vert 2resize ' . ((&columns * 110 + 105) / 211)
 exe '3resize ' . ((&lines * 8 + 26) / 53)
 tabnext
 edit ralts.c
@@ -1828,10 +1827,10 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 25 + 26) / 53)
-exe 'vert 1resize ' . ((&columns * 78 + 105) / 210)
+exe 'vert 1resize ' . ((&columns * 78 + 105) / 211)
 exe '2resize ' . ((&lines * 24 + 26) / 53)
-exe 'vert 2resize ' . ((&columns * 78 + 105) / 210)
-exe 'vert 3resize ' . ((&columns * 131 + 105) / 210)
+exe 'vert 2resize ' . ((&columns * 78 + 105) / 211)
+exe 'vert 3resize ' . ((&columns * 132 + 105) / 211)
 argglobal
 balt types.txt
 setlocal keymap=
@@ -2240,10 +2239,10 @@ keepjumps 801
 normal! 0
 wincmd w
 exe '1resize ' . ((&lines * 25 + 26) / 53)
-exe 'vert 1resize ' . ((&columns * 78 + 105) / 210)
+exe 'vert 1resize ' . ((&columns * 78 + 105) / 211)
 exe '2resize ' . ((&lines * 24 + 26) / 53)
-exe 'vert 2resize ' . ((&columns * 78 + 105) / 210)
-exe 'vert 3resize ' . ((&columns * 131 + 105) / 210)
+exe 'vert 2resize ' . ((&columns * 78 + 105) / 211)
+exe 'vert 3resize ' . ((&columns * 132 + 105) / 211)
 tabnext
 edit TODO.ignore
 set splitbelow splitright
@@ -2552,7 +2551,7 @@ badd +5 ralts.h
 badd +18 types.txt
 badd +801 pokemon_data.txt
 badd +10 Makefile
-badd +1 ~/.vim/vimrc
+badd +1 ~/Documents/Git/ErreKappa1/Vi/.vim/vimrc
 badd +1 .gitignore
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf

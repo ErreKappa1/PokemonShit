@@ -50,7 +50,7 @@ void globalAverageFn(Pokemon *db, int nr, Node_t **head, int debug){
 void topPkmnPerGenByStatFn(Pokemon *db, int nr, Node_t **head, int debug){
 
 	int gen=0;//stores the required generation
-	char stat[5+1];//stores the required statistic
+	char stat[5+1]={0};//stores the required statistic
 	char statList[6][5+1]={ "hp",//statistics list
 							"atk",
 							"def",
@@ -92,6 +92,7 @@ void topPkmnPerGenByStatFn(Pokemon *db, int nr, Node_t **head, int debug){
 			break;
 		}else{//print the error if necessary
 			printf("\n\nERROR: Must insert a gneration between 1 and 6, and a satistic between the listed ones");
+			stat="\0";
 			system(sleep);
 			system(clear);
 		}

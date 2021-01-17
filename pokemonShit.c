@@ -54,13 +54,13 @@ int main(void){
 				system(sleep);
 				system(clear);
 				break;
-			case statistics://open the statistic submenu
+			case stats://open the statistic submenu
 				system(clear);
 				subMenuWrapperStatsFn(db, nr, &head, debug);//function to manage statistics subenu
 				printf("\n");
 				system(clear);
 				break;
-			case exitTheProgram://Exit the program
+			case exitPrg://Exit the program
 				system(clear);
 				stop=0;
 				break;
